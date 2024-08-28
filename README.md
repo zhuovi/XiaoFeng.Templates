@@ -22,11 +22,10 @@ Nuget：XiaoFeng.Mvc.Templates
 通过Visual Studio 创建新项目，通过创建新项目时设置一些项目中的配置向导来完成创建XiaoFeng.Mvc框架的新项目。XiaoFeng.Mvc 低代码开发框架，用于创建 ASP.NET Core 应用程序的项目模板。此模板还可以用于REST API、Socket 项目模板、Mqtt 项目模板。
 
 ## 感谢支持
-<!--| JetBrains | [![JetBrains](https://github.com/user-attachments/assets/e7fae613-0d85-4c13-be9a-ec343fc30e63)](https://jb.gg/OpenSourceSupport) |
-| Visual Studio | [![Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2021/10/Product-Icon.svg)](https://visualstudio.microsoft.com/) |-->
+
 | 名称 | LOGO |
 | :----:| :----: |
-| JetBrains | [![JetBrains](https://camo.githubusercontent.com/8dc9898d621b099ba0baef38e2255dc4a101a5fb0af5e10c7ee8f6104b2b4ad4/68747470733a2f2f7265736f75726365732e6a6574627261696e732e636f6d2f73746f726167652f70726f64756374732f636f6d70616e792f6272616e642f6c6f676f732f6a625f6265616d2e7376673f5f67613d322e31383734383732392e313437323936303937352e313731303938323530332d313939333236303237372e31373033383334353930265f676c3d312a316f3735646e322a5f67612a4d546b354d7a49324d4449334e7934784e7a417a4f444d304e546b772a5f67615f394a393736444a5a36382a4d5463784d446b344d6a55774d6934334c6a45754d5463784d446b344e4455774f43347a4f4334774c6a412e)](https://jb.gg/OpenSourceSupport) |
+| JetBrains | [![JetBrains](https://github.com/user-attachments/assets/e7fae613-0d85-4c13-be9a-ec343fc30e63)](https://jb.gg/OpenSourceSupport) |
 | Visual Studio | [![Visual Studio](https://camo.githubusercontent.com/062bd93be4d796bb609715f79a861eac611ae9e43cf29e7d652f49b306c16b19/68747470733a2f2f76697375616c73747564696f2e6d6963726f736f66742e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032312f31302f50726f647563742d49636f6e2e737667)](https://visualstudio.microsoft.com/) |
 
 ## XiaoFeng
