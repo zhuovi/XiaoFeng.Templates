@@ -1,0 +1,226 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "eelf.cn",
+  "classifications": [ "Console", "Windows", "Linux", "XiaoFeng", "ELF", "Socket","Mqtt", "Mqtt Client", "Mqtt Server" ],
+  "identity": "XiaoFeng.Console.Mqtt",
+  "name": "XiaoFeng Mqtt",
+  "shortName": "elf.mqtt",
+  "description": "用于创建可在 Windows、Linux 和 macOS 上运行的命令行应用程序的项目，默认依赖于 XiaoFeng 类库。默认创建Mqtt Client,Mqtt Server代码。",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "ELF.Cube.Mqtt",
+  "preferNameDirectory": true,
+  "defaultName": "ELF.Cube.Mqtt",
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "项目框架",
+      "displayName": "项目框架",
+      "enableQuotelessLiterals": true,
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net6.0",
+          "description": "net6.0"
+        },
+        {
+          "choice": "net7.0",
+          "description": "net7.0"
+        },
+        {
+          "choice": "net8.0",
+          "description": "net8.0"
+        },
+        {
+          "choice": "net9.0",
+          "description": "net9.0"
+        }
+      ],
+      "replaces": "FrameworkParameter",
+      "defaultValue": "net8.0"
+    },
+    "SupportDocker": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "启用容器支持",
+      "displayName": "启用容器支持",
+      "defaultValue": "false",
+      "enableQuotelessLiterals": true
+    },
+    "DockerOS": {
+      "type": "parameter",
+      "description": "容器 OS",
+      "displayName": "容器 OS",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "Windows",
+          "description": "Windows",
+          "displayName": "Windows"
+        },
+        {
+          "choice": "Linux",
+          "description": "Linux",
+          "displayName": "Linux"
+        }
+      ],
+      "defaultValue": "Linux",
+      "replaces": "DockerOSParameter",
+      "isEnabled": "(SupportDocker == true)"
+    },
+    "DockerType": {
+      "type": "parameter",
+      "datatype": "choice",
+      "description": "容器生成类型",
+      "displayName": "容器生成类型",
+      "choices": [
+        {
+          "choice": "Dockerfile",
+          "description": "Dockerfile",
+          "displayName": "Dockerfile"
+        }
+      ],
+      "isEnabled": "(SupportDocker == true)"
+    },
+    "NativeAOT": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "启用 native AOT 发布",
+      "displayName": "启用 native AOT 发布",
+      "defaultValue": "false",
+      "isEnabled": "(Framework == \"net8.0\" || Framework == \"9.0\")"
+    },
+    "XiaoFeng Version": {
+      "type": "parameter",
+      "description": "XiaoFeng 类库版本",
+      "displayName": "XiaoFeng 类库版本",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "5.2.0",
+          "displayName": "XiaoFeng 5.2.0",
+          "description": "XiaoFeng 5.2.0"
+        },
+        {
+          "choice": "5.1.0",
+          "displayName": "XiaoFeng 5.1.0",
+          "description": "XiaoFeng 5.1.0"
+        },
+        {
+          "choice": "5.0.5",
+          "displayName": "XiaoFeng 5.0.5",
+          "description": "XiaoFeng 5.0.5"
+        },
+        {
+          "choice": "5.0.4",
+          "displayName": "XiaoFeng 5.0.4",
+          "description": "XiaoFeng 5.0.4"
+        }
+      ],
+      "replaces": "XiaoFengVersion",
+      "defaultValue": "5.2.0"
+    },
+    "XiaoFeng Location": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "XiaoFeng 本地项目地址",
+      "displayName": "XiaoFeng 本地项目地址",
+      "replaces": "XiaoFengLocation",
+      "defaultValue": "E:\\Work\\XiaoFeng\\XiaoFeng.csproj"
+    },
+    "XiaoFeng.Mqtt Version": {
+      "type": "parameter",
+      "description": "XiaoFeng.Mqtt 类库版本",
+      "displayName": "XiaoFeng.Mqtt 类库版本",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "1.0.3",
+          "displayName": "XiaoFeng.Mqtt 1.0.3",
+          "description": "XiaoFeng.Mqtt 1.0.3"
+        },
+        {
+          "choice": "1.0.2",
+          "displayName": "XiaoFeng.Mqtt 1.0.2",
+          "description": "XiaoFeng.Mqtt 1.0.2"
+        },
+        {
+          "choice": "1.0.1",
+          "displayName": "XiaoFeng.Mqtt 1.0.1",
+          "description": "XiaoFeng.Mqtt 1.0.1"
+        },
+        {
+          "choice": "1.0.0",
+          "displayName": "XiaoFeng.Mqtt 1.0.0",
+          "description": "XiaoFeng.Mqtt 1.0.0"
+        }
+      ],
+      "replaces": "XiaoFengMqttVersion",
+      "defaultValue": "1.0.3"
+    },
+    "XiaoFeng.Mqtt Location": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "XiaoFeng.Mqtt本地项目地址",
+      "displayName": "XiaoFeng.Mqtt本地项目地址",
+      "replaces": "XiaoFengMqttLocation",
+      "defaultValue": "E:\\Work\\XiaoFeng.Mqtt\\XiaoFeng.Mqtt.csproj"
+    },
+    "DbProvider": {
+      "type": "parameter",
+      "description": "数据库驱动",
+      "displayName": "数据库驱动",
+      "enableQuotelessLiterals": true,
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "SQLite",
+          "description": "SQLite"
+        },
+        {
+          "choice": "SqlServer",
+          "description": "SqlServer"
+        },
+        {
+          "choice": "MySql",
+          "description": "MySql"
+        },
+        {
+          "choice": "Oracle",
+          "description": "Oracle"
+        },
+        {
+          "choice": "Dameng",
+          "description": "Dameng"
+        }
+      ],
+      "replaces": "ELFDbProvider",
+      "defaultValue": "SQLite",
+      "allowMultipleValues": true
+    },
+    "UserSecertId": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "ELFUserSecretsId"
+    }
+  },
+  "primaryOutputs": [
+    {
+      "path": "ELF.Cube.Mqtt.csproj"
+    }
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!SupportDocker)",
+          "exclude": [
+            "Dockerfile"
+          ]
+        }
+      ]
+    }
+  ]
+}

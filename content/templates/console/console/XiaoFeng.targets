@@ -1,0 +1,38 @@
+<Project ToolsVersion="1.0" xmlurl="http://nuget.fayelf.com/XiaoFeng.targets">
+	<PropertyGroup>
+		<!--版权配置-->
+		<Authors>Jacky</Authors>
+		<Company>魔法精灵</Company>
+		<Copyright>
+			copyright © (2008-2024) FAYELF All Rights Reserved. 魔法精灵(www.eelf.cn) QQ:7092734 Email:jacky@eelf.cn</Copyright>
+		<PackageTags>FAYELF;XiaoFeng;</PackageTags>
+		<Version>$(VersionPrefix).$(VersionSuffix)</Version>
+		<FileVersion>$(Version)</FileVersion>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<ProductVersion>$(VersionPrefix)</ProductVersion>
+		<!--语言包配置-->
+		<SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
+	</PropertyGroup>
+	<PropertyGroup
+		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR '$(TargetFramework)'=='net8.0'">
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<PropertyGroup>
+		<DefineConstants>XiaoFeng;</DefineConstants>
+	</PropertyGroup>
+	<!--全局引用-->
+	<ItemGroup
+		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR '$(TargetFramework)'=='net8.0'">
+		<Using Include="XiaoFeng;XiaoFeng.IO;" />
+		<Using Remove="System.Net.Http.Json;Microsoft.AspNetCore.Http;" />
+	</ItemGroup>
+	<!--XiaoFeng 项目引用-->
+	<!--#if (XiaoFengLocation != "") -->
+	<ItemGroup Condition="$(XiaoFeng) == 'Debug'">
+		<ProjectReference Include="XiaoFengLocation" />
+	</ItemGroup>
+	<!--#endif-->
+	<ItemGroup Condition="$(XiaoFeng) != 'Debug'">
+		<PackageReference Include="XiaoFeng" Version="XiaoFengVersion" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>FrameworkParameter</TargetFramework>
+		<VersionPrefix>1.0</VersionPrefix>
+		<VersionSuffix>0</VersionSuffix>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<XiaoFengMvc></XiaoFengMvc>
+		<!--#if (SupportDocker)-->
+		<DockerDefaultTargetOS>DockerOSParameter</DockerDefaultTargetOS>
+		<!--#if (DockerType == ".NET SDK") -->
+		<EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
+		<!--#if (Framework == "net6.0") -->
+		<ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:6.0</ContainerBaseImage>
+		<!--#elseif (Framework == "net7.0") -->
+		<ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:7.0</ContainerBaseImage>
+		<!--#elseif (Framework == "net8.0") -->
+		<ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:8.0</ContainerBaseImage>
+		<!--#endif-->
+		<UserSecretsId>ELFUserSecretsId</UserSecretsId>
+		<!--#endif-->
+		<!--#endif-->
+	</PropertyGroup>
+	<Import Project="XiaoFeng.Mvc.targets" Version="1.0.0" />
+</Project>

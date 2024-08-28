@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    //#if (SupportDocker)
+    "ELF.Cube.Socket(Dockerfile)": {
+      "commandName": "Docker"
+    },
+    //#endif
+    "ELF.Cube.Socket": {
+      "commandName": "Project"
+    }
+  }
+}

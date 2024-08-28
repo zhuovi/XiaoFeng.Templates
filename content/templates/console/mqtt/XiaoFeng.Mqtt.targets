@@ -1,0 +1,19 @@
+<Project ToolsVersion="1.0" xmlurl="http://nuget.fayelf.com/XiaoFeng.targets">
+	<PropertyGroup Condition="'$(XiaoFengMqtt)' == 'Debug'">
+		<XiaoFeng>Debug</XiaoFeng>
+	</PropertyGroup>
+	<PropertyGroup>
+		<DefineConstants>XiaoFengMqtt;</DefineConstants>
+	</PropertyGroup>
+	<Import Project="XiaoFeng.targets" Version="1.0.0" />
+	<!--XiaoFeng.Mqtt项目引用-->
+	<!--#if (XiaoFengMqttLocation != "") -->
+	<ItemGroup Condition="$(XiaoFengMqtt) == 'Debug'">
+		<ProjectReference Include="XiaoFengMqttLocation" />
+	</ItemGroup>
+	<!--#endif-->
+	<ItemGroup Condition="$(XiaoFengMqtt) != 'Debug'">
+		<PackageReference Include="XiaoFeng.Mqtt" Version="XiaoFengMqttVersion" />
+	</ItemGroup>
+
+</Project>
