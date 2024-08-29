@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<!-- The package metadata. Fill in the properties marked as TODO below -->
 		<!-- Follow the instructions on https://learn.microsoft.com/en-us/nuget/create-packages/package-authoring-best-practices -->
-		<PackageId>XiaoFeng.Mvc.Templates</PackageId>
+		<PackageId>XiaoFeng.Templates</PackageId>
 		<PackageVersion>1.0.0</PackageVersion>
 		<Title>XiaoFeng.Mvc 低代码开发框架，Web 项目模板、Socket 项目模板、Mqtt 项目模板。</Title>
 		<Product>XiaoFeng.Mvc 低代码开发框架，Web 项目模板、Socket 项目模板、Mqtt 项目模板。</Product>

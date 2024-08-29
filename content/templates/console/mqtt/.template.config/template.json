@@ -5,7 +5,7 @@
   "identity": "XiaoFeng.Console.Mqtt",
   "name": "XiaoFeng Mqtt",
   "shortName": "elf.mqtt",
-  "description": "用于创建可在 Windows、Linux 和 macOS 上运行的命令行应用程序的项目，默认依赖于 XiaoFeng 类库。默认创建Mqtt Client,Mqtt Server代码。",
+  "description": "用于创建可在 Windows、Linux 和 macOS 上运行的命令行应用程序的项目，默认依赖于 XiaoFeng 类库、XiaoFeng.Mqtt 类库。默认创建Mqtt Client,Mqtt Server代码。",
   "tags": {
     "language": "C#",
     "type": "project"

@@ -8,22 +8,22 @@
 ![Nuget](https://img.shields.io/nuget/v/xiaofeng?logo=nuget)
 ![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/xiaofeng?label=dev%20nuget&logo=nuget)
 
-Nuget£ºXiaoFeng.Mvc.Templates
+Nugetï¼šXiaoFeng.Mvc.Templates
 
-| QQÈººÅ | QQÈº | ¹«ÖÚºÅ |
+| QQç¾¤å· | QQç¾¤ | å…¬ä¼—å· |
 | :----:| :----: | :----: |
-| 748408911  | ![QQ Èº](https://user-images.githubusercontent.com/16105174/198058269-0ea5928c-a2fc-4049-86da-cca2249229ae.png) | ![³©ÁÄÁË¸ö¿Æ¼¼](https://user-images.githubusercontent.com/16105174/198059698-adbf29c3-60c2-4c76-b894-21793b40cf34.jpg) |
+| 748408911  | ![QQ ç¾¤](https://user-images.githubusercontent.com/16105174/198058269-0ea5928c-a2fc-4049-86da-cca2249229ae.png) | ![ç•…èŠäº†ä¸ªç§‘æŠ€](https://user-images.githubusercontent.com/16105174/198059698-adbf29c3-60c2-4c76-b894-21793b40cf34.jpg) |
 
 
-Ô´Âë£º https://github.com/zhuovi/XiaoFeng.Templates
+æºç ï¼š https://github.com/zhuovi/XiaoFeng.Templates
 
-½Ì³Ì£º https://www.eelf.cn
+æ•™ç¨‹ï¼š https://www.eelf.cn
 
-Í¨¹ıVisual Studio ´´½¨ĞÂÏîÄ¿£¬Í¨¹ı´´½¨ĞÂÏîÄ¿Ê±ÉèÖÃÒ»Ğ©ÏîÄ¿ÖĞµÄÅäÖÃÏòµ¼À´Íê³É´´½¨XiaoFeng.Mvc¿ò¼ÜµÄĞÂÏîÄ¿¡£XiaoFeng.Mvc µÍ´úÂë¿ª·¢¿ò¼Ü£¬ÓÃÓÚ´´½¨ ASP.NET Core Ó¦ÓÃ³ÌĞòµÄÏîÄ¿Ä£°å¡£´ËÄ£°å»¹¿ÉÒÔÓÃÓÚREST API¡¢Socket ÏîÄ¿Ä£°å¡¢Mqtt ÏîÄ¿Ä£°å¡£
+é€šè¿‡Visual Studio åˆ›å»ºæ–°é¡¹ç›®ï¼Œé€šè¿‡åˆ›å»ºæ–°é¡¹ç›®æ—¶è®¾ç½®ä¸€äº›é¡¹ç›®ä¸­çš„é…ç½®å‘å¯¼æ¥å®Œæˆåˆ›å»ºXiaoFeng.Mvcæ¡†æ¶çš„æ–°é¡¹ç›®ã€‚XiaoFeng.Mvc ä½ä»£ç å¼€å‘æ¡†æ¶ï¼Œç”¨äºåˆ›å»º ASP.NET Core åº”ç”¨ç¨‹åºçš„é¡¹ç›®æ¨¡æ¿ã€‚æ­¤æ¨¡æ¿è¿˜å¯ä»¥ç”¨äºREST APIã€Socket é¡¹ç›®æ¨¡æ¿ã€Mqtt é¡¹ç›®æ¨¡æ¿ã€‚
 
-## ¸ĞĞ»Ö§³Ö
+## æ„Ÿè°¢æ”¯æŒ
 
-| Ãû³Æ | LOGO |
+| åç§° | LOGO |
 | :----:| :----: |
 | JetBrains | [![JetBrains](https://github.com/user-attachments/assets/e7fae613-0d85-4c13-be9a-ec343fc30e63)](https://jb.gg/OpenSourceSupport) |
 | Visual Studio | [![Visual Studio](https://camo.githubusercontent.com/062bd93be4d796bb609715f79a861eac611ae9e43cf29e7d652f49b306c16b19/68747470733a2f2f76697375616c73747564696f2e6d6963726f736f66742e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032312f31302f50726f647563742d49636f6e2e737667)](https://visualstudio.microsoft.com/) |
@@ -41,74 +41,74 @@ XiaoFeng generator with [XiaoFeng](https://github.com/zhuovi/XiaoFeng).
 ```
 
 
-# XiaoFeng Àà¿â°üº¬¿â
-| ÃüÃû¿Õ¼ä | ËùÊôÀà¿â | ¿ªÔ´×´Ì¬ | ËµÃ÷ | °üº¬¹¦ÄÜ |
+# XiaoFeng ç±»åº“åŒ…å«åº“
+| å‘½åç©ºé—´ | æ‰€å±ç±»åº“ | å¼€æºçŠ¶æ€ | è¯´æ˜ | åŒ…å«åŠŸèƒ½ |
 | :----| :---- | :---- | :----: | :---- |
-| XiaoFeng.Prototype | XiaoFeng.Core | :white_check_mark: | À©Õ¹¿â | ToCase ÀàĞÍ×ª»»<br/>ToTimestamp,ToTimestamps Ê±¼ä×ªÊ±¼ä´Á<br/>GetBasePath »ñÈ¡ÎÄ¼ş¾ø¶ÔÂ·¾¶,Ö§³ÖLinux,Windows<br/>GetFileName »ñÈ¡ÎÄ¼şÃû³Æ<br/>GetMatch,GetMatches,GetMatchs,IsMatch,ReplacePatten,RemovePattern ÕıÔò±í´ïÊ½²Ù×÷<br/> |
-| XiaoFeng.Net | XiaoFeng.Net | :white_check_mark: | ÍøÂç¿â | XiaoFengÍøÂç¿â£¬·â×°ÁËSocket¿Í»§¶Ë£¬·şÎñ¶Ë£¨Socket,WebSocket£©£¬¸ù¾İµ±Ç°¿â¿ÉÇáËÉÊµÏÖ¶©ÔÄ£¬·¢²¼µÈ¹¦ÄÜ¡£|
-| XiaoFeng.Http | XiaoFeng.Core | :white_check_mark: | Ä£ÄâÇëÇó¿â | Ä£ÄâÍøÂçÇëÇó |
-| XiaoFeng.Data | XiaoFeng.Core | :white_check_mark: | Êı¾İ¿â²Ù×÷¿â | Ö§³ÖSQLSERVER,MYSQL,ORACLE,´ïÃÎ,SQLITE,ACCESS,OLEDB,ODBCµÈÊıÊ®ÖÖÊı¾İ¿â |
-| XiaoFeng.Cache | XiaoFeng.Core | :white_check_mark: | »º´æ¿â |  ÄÚ´æ»º´æ,Redis,MemcachedCache,MemoryCache,FileCache»º´æ |
-| XiaoFeng.Config | XiaoFeng.Core | :white_check_mark: | ÅäÖÃÎÄ¼ş¿â | Í¨¹ı´´½¨Ä£ĞÍ×Ô¶¯Éú³ÉÅäÖÃÎÄ¼ş£¬¿ÉÎªxml,json,iniÎÄ¼ş¸ñÊ½ |
-| XiaoFeng.Cryptography | XiaoFeng.Core | :white_check_mark: | ¼ÓÃÜËã·¨¿â | AES,DES,RSA,MD5,DES3,SHA,HMAC,RC4¼ÓÃÜËã·¨ |
-| XiaoFeng.Excel | XiaoFeng.Excel | :white_check_mark: | Excel²Ù×÷¿â | Excel²Ù×÷£¬´´½¨excel,±à¼­excel,¶ÁÈ¡excelÄÚÈİ£¬±ß¿ò£¬×ÖÌå£¬ÑùÊ½µÈ¹¦ÄÜ  |
-| XiaoFeng.Ftp | XiaoFeng.Ftp | :white_check_mark: | FTPÇëÇó¿â | FTP¿Í»§¶Ë |
-| XiaoFeng.IO | XiaoFeng.Core | :white_check_mark: | ÎÄ¼ş²Ù×÷¿â | ÎÄ¼ş¶ÁĞ´²Ù×÷ |
-| XiaoFeng.Json | XiaoFeng.Core | :white_check_mark: | JsonĞòÁĞ»¯£¬·´ĞòÁĞ»¯¿â | JsonĞòÁĞ»¯£¬·´ĞòÁĞ»¯¿â |
-| XiaoFeng.Xml | XiaoFeng.Core | :white_check_mark: | XmlĞòÁĞ»¯£¬·´ĞòÁĞ»¯¿â | XmlĞòÁĞ»¯£¬·´ĞòÁĞ»¯¿â |
-| XiaoFeng.Log | XiaoFeng.Core | :white_check_mark: | ÈÕÖ¾¿â | Ğ´ÈÕÖ¾ÎÄ¼ş,Êı¾İ¿â |
-| XiaoFeng.Memcached | XiaoFeng.Memcached | :white_check_mark: | Memcached»º´æ¿â | MemcachedÖĞ¼ä¼ş,Ö§³Ö.NET¿ò¼Ü¡¢.NETÄÚºËºÍ.NET±ê×¼¿â,Ò»ÖÖ·Ç³£·½±ã²Ù×÷µÄ¿Í»§¶Ë¹¤¾ß¡£ÊµÏÖÁËSet,Add,Replace,PrePend,Append,Cas,Get,Gets,Gat,Gats,Delete,Touch,Stats,Stats Items,Stats Slabs,Stats Sizes,Flush_All,Increment,Decrement,Ïß³Ì³Ø¹¦ÄÜ¡£|
-| XiaoFeng.Redis | XiaoFeng.Redis | :white_check_mark: | Redis»º´æ¿â | RedisÖĞ¼ä¼ş,Ö§³Ö.NET¿ò¼Ü¡¢.NETÄÚºËºÍ.NET±ê×¼¿â,Ò»ÖÖ·Ç³£·½±ã²Ù×÷µÄ¿Í»§¶Ë¹¤¾ß¡£ÊµÏÖÁËHash,Key,String,ZSet,Stream,Log,List,¶©ÔÄ·¢²¼,Ïß³Ì³Ø¹¦ÄÜ; |
-| XiaoFeng.Threading | XiaoFeng.Core | :white_check_mark: | Ïß³Ì¿â | Ïß³ÌÈÎÎñ,Ïß³Ì¶ÓÁĞ |
-| XiaoFeng.Mvc | XiaoFeng.Mvc | :x: | µÍ´úÂëWEB¿ª·¢¿ò¼Ü | .net core »ù´¡Àà£¬¿ìËÙ¿ª·¢CMS¿ò¼Ü£¬ÕæÕıµÄµÍ´úÂëÆ½Ì¨£¬×Ô´ø½ÇÉ«È¨ÏŞ£¬WebAPIÆ½Ì¨£¬ºóÌ¨¹ÜÀí£¬¿ÉÍĞ¹Üµ½·şÎñÔËĞĞÃüÁîÎª:Ó¦ÓÃ.exe install ·şÎñÃû ·şÎñËµÃ÷,ÃüÁî»¹ÓĞ delete É¾³ı start Æô¶¯  stop Í£Ö¹¡£ |
-| XiaoFeng.Proxy | XiaoFeng.Proxy | :white_check_mark: | ´úÀí¿â | ¿ª·¢ÖĞ |
-| XiaoFeng.TDengine | XiaoFeng.TDengine | :white_check_mark: | TDengine ¿Í»§¶Ë | ¿ª·¢ÖĞ |
-| XiaoFeng.GB28181 | XiaoFeng.GB28181 | :white_check_mark: | ÊÓÆµ¼à¿Ø¿â£¬SIPÀà¿â£¬GB28181Ğ­Òé | ¿ª·¢ÖĞ |
-| XiaoFeng.Onvif | XiaoFeng.Onvif | :white_check_mark: | ÊÓÆµ¼à¿Ø¿âOnvifĞ­Òé | XiaoFeng.Onvif »ùÓÚ.NETÆ½Ì¨Ê¹ÓÃC#·â×°Onvif³£ÓÃ½Ó¿Ú¡¢Éè±¸¡¢Ã½Ìå¡¢ÔÆÌ¨µÈ¹¦ÄÜ£¬ ¾Ü¾øWCF·şÎñÒıÓÃ¶¯Ì¬´úÀíÉú³ÉwsdlÀàÎÄ¼ş £¬ Ê¹ÓÃÔ­ÉúXMLÀ©Õ¹±ê¼ÇÓïÑÔ·â×°²ÎÊı£¬ËùÓĞµÄÊı¾İÁ÷Ïò¶¼¿É¿Ø¡£ |
-| FayElf.Plugins.WeChat | FayElf.Plugins.WeChat | :white_check_mark: | Î¢ĞÅ¹«ÖÚºÅ£¬Ğ¡³ÌĞòÀà¿â | Î¢ĞÅ¹«ÖÚºÅ£¬Ğ¡³ÌĞòÀà¿â¡£ |
-| XiaoFeng.Mqtt | XiaoFeng.Mqtt | :white_check_mark: | MQTTĞ­Òé | XiaoFeng.MqttÖĞ¼ä¼ş,Ö§³Ö.NET¿ò¼Ü¡¢.NETÄÚºËºÍ.NET±ê×¼¿â,Ò»ÖÖ·Ç³£·½±ã²Ù×÷µÄ¿Í»§¶Ë¹¤¾ß¡£ÊµÏÖÁËMQTT¿Í»§¶Ë£¬MQTT·şÎñ¶Ë,Í¬Ê±Ö§³ÖTCP£¬WebSocketÁ¬½Ó¡£Ö§³ÖĞ­Òé°æ±¾3.0.0,3.1.0,5.0.0¡£ |
-| XiaoFeng.Modbus | XiaoFeng.Modbus | :white_check_mark: | MODBUSĞ­Òé | MODBUSĞ­Òé,Ö§³ÖRTU¡¢ASCII¡¢TCPÈıÖÖ·½Ê½½øĞĞÍ¨ĞÅ£¬×Ô¶¯ÀëÏß±£´æ·şÎñ¶ËÊı¾İ |
-| XiaoFeng.DouYin | XiaoFeng.DouYin | :white_check_mark: | ¶¶Òô¿ª·ÅÆ½Ì¨SDK | ¶¶Òô¿ª·ÅÆ½Ì¨½Ó¿Ú |
-| XiaoFeng.KuaiShou | XiaoFeng.KuaiShou | :white_check_mark: | ¿ìÊÖ¿ª·ÅÆ½Ì¨SDK | ¿ìÊÖ¿ª·ÅÆ½Ì¨½Ó¿Ú |
-| XiaoFeng.Mvc.AdminWinDesk | XiaoFeng.Mvc.AdminWinDesk | :white_check_mark: | XiaoFeng.MvcºóÌ¨Æ¤·ô | Ä£·Âwindows×ÀÃæºóÌ¨Æ¤·ô |
-| FayElf.Cube.Blog | FayElf.Cube.Blog | :white_check_mark: | XiaoFeng.Mvc¿ª·¢µÄ¼¼Êõ²©¿Í | Ê¹ÓÃµÍ´úÂë¿ª·¢¿ò¼Ü£¨XiaoFeng.Mvc£©+WindowsºóÌ¨Æ¤·ô(XiaoFeng.Mvc.AdminWinDesk)£¬¿ª·¢µÄÒ»¸ö²©¿ÍÆ½Ì¨¡£ |
-| XiaoFeng.Ofd | XiaoFeng.Ofd | :white_check_mark: | OFD¶ÁĞ´¿â | OFD ¶ÁĞ´´¦Àí¿â£¬Ö§³ÖÎÄµµµÄÉú³É¡¢ÎÄµµ±à¼­¡¢ÎÄµµÅú×¢¡¢Êı×ÖÇ©Ãû¡¢ÎÄµµºÏ²¢¡¢ÎÄµµ²ğ·Ö¡¢ÎÄµµ×ª»»ÖÁPDF¡¢ÎÄµµ²éÑ¯µÈ¹¦ÄÜ¡£ |
-| XiaoFeng.Templates | XiaoFeng.Templates | :white_check_mark: | ÏîÄ¿Ä£°å | XiaoFeng.Mvc µÍ´úÂë¿ª·¢¿ò¼Ü£¬ÓÃÓÚ´´½¨ ASP.NET Core Ó¦ÓÃ³ÌĞòµÄÏîÄ¿Ä£°å¡£´ËÄ£°å»¹¿ÉÒÔÓÃÓÚREST API´ËÄ£°å»¹¿ÉÒÔÓÃÓÚREST API¡¢Socket ÏîÄ¿Ä£°å¡¢Mqtt ÏîÄ¿Ä£°å¡£ |
+| XiaoFeng.Prototype | XiaoFeng.Core | :white_check_mark: | æ‰©å±•åº“ | ToCase ç±»å‹è½¬æ¢<br/>ToTimestamp,ToTimestamps æ—¶é—´è½¬æ—¶é—´æˆ³<br/>GetBasePath è·å–æ–‡ä»¶ç»å¯¹è·¯å¾„,æ”¯æŒLinux,Windows<br/>GetFileName è·å–æ–‡ä»¶åç§°<br/>GetMatch,GetMatches,GetMatchs,IsMatch,ReplacePatten,RemovePattern æ­£åˆ™è¡¨è¾¾å¼æ“ä½œ<br/> |
+| XiaoFeng.Net | XiaoFeng.Net | :white_check_mark: | ç½‘ç»œåº“ | XiaoFengç½‘ç»œåº“ï¼Œå°è£…äº†Socketå®¢æˆ·ç«¯ï¼ŒæœåŠ¡ç«¯ï¼ˆSocket,WebSocketï¼‰ï¼Œæ ¹æ®å½“å‰åº“å¯è½»æ¾å®ç°è®¢é˜…ï¼Œå‘å¸ƒç­‰åŠŸèƒ½ã€‚|
+| XiaoFeng.Http | XiaoFeng.Core | :white_check_mark: | æ¨¡æ‹Ÿè¯·æ±‚åº“ | æ¨¡æ‹Ÿç½‘ç»œè¯·æ±‚ |
+| XiaoFeng.Data | XiaoFeng.Core | :white_check_mark: | æ•°æ®åº“æ“ä½œåº“ | æ”¯æŒSQLSERVER,MYSQL,ORACLE,è¾¾æ¢¦,SQLITE,ACCESS,OLEDB,ODBCç­‰æ•°åç§æ•°æ®åº“ |
+| XiaoFeng.Cache | XiaoFeng.Core | :white_check_mark: | ç¼“å­˜åº“ |  å†…å­˜ç¼“å­˜,Redis,MemcachedCache,MemoryCache,FileCacheç¼“å­˜ |
+| XiaoFeng.Config | XiaoFeng.Core | :white_check_mark: | é…ç½®æ–‡ä»¶åº“ | é€šè¿‡åˆ›å»ºæ¨¡å‹è‡ªåŠ¨ç”Ÿæˆé…ç½®æ–‡ä»¶ï¼Œå¯ä¸ºxml,json,iniæ–‡ä»¶æ ¼å¼ |
+| XiaoFeng.Cryptography | XiaoFeng.Core | :white_check_mark: | åŠ å¯†ç®—æ³•åº“ | AES,DES,RSA,MD5,DES3,SHA,HMAC,RC4åŠ å¯†ç®—æ³• |
+| XiaoFeng.Excel | XiaoFeng.Excel | :white_check_mark: | Excelæ“ä½œåº“ | Excelæ“ä½œï¼Œåˆ›å»ºexcel,ç¼–è¾‘excel,è¯»å–excelå†…å®¹ï¼Œè¾¹æ¡†ï¼Œå­—ä½“ï¼Œæ ·å¼ç­‰åŠŸèƒ½  |
+| XiaoFeng.Ftp | XiaoFeng.Ftp | :white_check_mark: | FTPè¯·æ±‚åº“ | FTPå®¢æˆ·ç«¯ |
+| XiaoFeng.IO | XiaoFeng.Core | :white_check_mark: | æ–‡ä»¶æ“ä½œåº“ | æ–‡ä»¶è¯»å†™æ“ä½œ |
+| XiaoFeng.Json | XiaoFeng.Core | :white_check_mark: | Jsonåºåˆ—åŒ–ï¼Œååºåˆ—åŒ–åº“ | Jsonåºåˆ—åŒ–ï¼Œååºåˆ—åŒ–åº“ |
+| XiaoFeng.Xml | XiaoFeng.Core | :white_check_mark: | Xmlåºåˆ—åŒ–ï¼Œååºåˆ—åŒ–åº“ | Xmlåºåˆ—åŒ–ï¼Œååºåˆ—åŒ–åº“ |
+| XiaoFeng.Log | XiaoFeng.Core | :white_check_mark: | æ—¥å¿—åº“ | å†™æ—¥å¿—æ–‡ä»¶,æ•°æ®åº“ |
+| XiaoFeng.Memcached | XiaoFeng.Memcached | :white_check_mark: | Memcachedç¼“å­˜åº“ | Memcachedä¸­é—´ä»¶,æ”¯æŒ.NETæ¡†æ¶ã€.NETå†…æ ¸å’Œ.NETæ ‡å‡†åº“,ä¸€ç§éå¸¸æ–¹ä¾¿æ“ä½œçš„å®¢æˆ·ç«¯å·¥å…·ã€‚å®ç°äº†Set,Add,Replace,PrePend,Append,Cas,Get,Gets,Gat,Gats,Delete,Touch,Stats,Stats Items,Stats Slabs,Stats Sizes,Flush_All,Increment,Decrement,çº¿ç¨‹æ± åŠŸèƒ½ã€‚|
+| XiaoFeng.Redis | XiaoFeng.Redis | :white_check_mark: | Redisç¼“å­˜åº“ | Redisä¸­é—´ä»¶,æ”¯æŒ.NETæ¡†æ¶ã€.NETå†…æ ¸å’Œ.NETæ ‡å‡†åº“,ä¸€ç§éå¸¸æ–¹ä¾¿æ“ä½œçš„å®¢æˆ·ç«¯å·¥å…·ã€‚å®ç°äº†Hash,Key,String,ZSet,Stream,Log,List,è®¢é˜…å‘å¸ƒ,çº¿ç¨‹æ± åŠŸèƒ½; |
+| XiaoFeng.Threading | XiaoFeng.Core | :white_check_mark: | çº¿ç¨‹åº“ | çº¿ç¨‹ä»»åŠ¡,çº¿ç¨‹é˜Ÿåˆ— |
+| XiaoFeng.Mvc | XiaoFeng.Mvc | :x: | ä½ä»£ç WEBå¼€å‘æ¡†æ¶ | .net core åŸºç¡€ç±»ï¼Œå¿«é€Ÿå¼€å‘CMSæ¡†æ¶ï¼ŒçœŸæ­£çš„ä½ä»£ç å¹³å°ï¼Œè‡ªå¸¦è§’è‰²æƒé™ï¼ŒWebAPIå¹³å°ï¼Œåå°ç®¡ç†ï¼Œå¯æ‰˜ç®¡åˆ°æœåŠ¡è¿è¡Œå‘½ä»¤ä¸º:åº”ç”¨.exe install æœåŠ¡å æœåŠ¡è¯´æ˜,å‘½ä»¤è¿˜æœ‰ delete åˆ é™¤ start å¯åŠ¨  stop åœæ­¢ã€‚ |
+| XiaoFeng.Proxy | XiaoFeng.Proxy | :white_check_mark: | ä»£ç†åº“ | å¼€å‘ä¸­ |
+| XiaoFeng.TDengine | XiaoFeng.TDengine | :white_check_mark: | TDengine å®¢æˆ·ç«¯ | å¼€å‘ä¸­ |
+| XiaoFeng.GB28181 | XiaoFeng.GB28181 | :white_check_mark: | è§†é¢‘ç›‘æ§åº“ï¼ŒSIPç±»åº“ï¼ŒGB28181åè®® | å¼€å‘ä¸­ |
+| XiaoFeng.Onvif | XiaoFeng.Onvif | :white_check_mark: | è§†é¢‘ç›‘æ§åº“Onvifåè®® | XiaoFeng.Onvif åŸºäº.NETå¹³å°ä½¿ç”¨C#å°è£…Onvifå¸¸ç”¨æ¥å£ã€è®¾å¤‡ã€åª’ä½“ã€äº‘å°ç­‰åŠŸèƒ½ï¼Œ æ‹’ç»WCFæœåŠ¡å¼•ç”¨åŠ¨æ€ä»£ç†ç”Ÿæˆwsdlç±»æ–‡ä»¶ ï¼Œ ä½¿ç”¨åŸç”ŸXMLæ‰©å±•æ ‡è®°è¯­è¨€å°è£…å‚æ•°ï¼Œæ‰€æœ‰çš„æ•°æ®æµå‘éƒ½å¯æ§ã€‚ |
+| FayElf.Plugins.WeChat | FayElf.Plugins.WeChat | :white_check_mark: | å¾®ä¿¡å…¬ä¼—å·ï¼Œå°ç¨‹åºç±»åº“ | å¾®ä¿¡å…¬ä¼—å·ï¼Œå°ç¨‹åºç±»åº“ã€‚ |
+| XiaoFeng.Mqtt | XiaoFeng.Mqtt | :white_check_mark: | MQTTåè®® | XiaoFeng.Mqttä¸­é—´ä»¶,æ”¯æŒ.NETæ¡†æ¶ã€.NETå†…æ ¸å’Œ.NETæ ‡å‡†åº“,ä¸€ç§éå¸¸æ–¹ä¾¿æ“ä½œçš„å®¢æˆ·ç«¯å·¥å…·ã€‚å®ç°äº†MQTTå®¢æˆ·ç«¯ï¼ŒMQTTæœåŠ¡ç«¯,åŒæ—¶æ”¯æŒTCPï¼ŒWebSocketè¿æ¥ã€‚æ”¯æŒåè®®ç‰ˆæœ¬3.0.0,3.1.0,5.0.0ã€‚ |
+| XiaoFeng.Modbus | XiaoFeng.Modbus | :white_check_mark: | MODBUSåè®® | MODBUSåè®®,æ”¯æŒRTUã€ASCIIã€TCPä¸‰ç§æ–¹å¼è¿›è¡Œé€šä¿¡ï¼Œè‡ªåŠ¨ç¦»çº¿ä¿å­˜æœåŠ¡ç«¯æ•°æ® |
+| XiaoFeng.DouYin | XiaoFeng.DouYin | :white_check_mark: | æŠ–éŸ³å¼€æ”¾å¹³å°SDK | æŠ–éŸ³å¼€æ”¾å¹³å°æ¥å£ |
+| XiaoFeng.KuaiShou | XiaoFeng.KuaiShou | :white_check_mark: | å¿«æ‰‹å¼€æ”¾å¹³å°SDK | å¿«æ‰‹å¼€æ”¾å¹³å°æ¥å£ |
+| XiaoFeng.Mvc.AdminWinDesk | XiaoFeng.Mvc.AdminWinDesk | :white_check_mark: | XiaoFeng.Mvcåå°çš®è‚¤ | æ¨¡ä»¿windowsæ¡Œé¢åå°çš®è‚¤ |
+| FayElf.Cube.Blog | FayElf.Cube.Blog | :white_check_mark: | XiaoFeng.Mvcå¼€å‘çš„æŠ€æœ¯åšå®¢ | ä½¿ç”¨ä½ä»£ç å¼€å‘æ¡†æ¶ï¼ˆXiaoFeng.Mvcï¼‰+Windowsåå°çš®è‚¤(XiaoFeng.Mvc.AdminWinDesk)ï¼Œå¼€å‘çš„ä¸€ä¸ªåšå®¢å¹³å°ã€‚ |
+| XiaoFeng.Ofd | XiaoFeng.Ofd | :white_check_mark: | OFDè¯»å†™åº“ | OFD è¯»å†™å¤„ç†åº“ï¼Œæ”¯æŒæ–‡æ¡£çš„ç”Ÿæˆã€æ–‡æ¡£ç¼–è¾‘ã€æ–‡æ¡£æ‰¹æ³¨ã€æ•°å­—ç­¾åã€æ–‡æ¡£åˆå¹¶ã€æ–‡æ¡£æ‹†åˆ†ã€æ–‡æ¡£è½¬æ¢è‡³PDFã€æ–‡æ¡£æŸ¥è¯¢ç­‰åŠŸèƒ½ã€‚ |
+| XiaoFeng.Templates | XiaoFeng.Templates | :white_check_mark: | é¡¹ç›®æ¨¡æ¿ | XiaoFeng.Mvc ä½ä»£ç å¼€å‘æ¡†æ¶ï¼Œç”¨äºåˆ›å»º ASP.NET Core åº”ç”¨ç¨‹åºçš„é¡¹ç›®æ¨¡æ¿ã€‚æ­¤æ¨¡æ¿è¿˜å¯ä»¥ç”¨äºREST APIæ­¤æ¨¡æ¿è¿˜å¯ä»¥ç”¨äºREST APIã€Socket é¡¹ç›®æ¨¡æ¿ã€Mqtt é¡¹ç›®æ¨¡æ¿ã€‚ |
 
-## ÓÃ·¨ÊµÀı
+## ç”¨æ³•å®ä¾‹
 
-ÔÚ cmd ÃüÁî´°¿ÚÖĞÊäÈë
+åœ¨ cmd å‘½ä»¤çª—å£ä¸­è¾“å…¥
 
-### ´ò°ü
+### æ‰“åŒ…
 
 ```shell
 E:\Work\XiaoFeng.Templates> dotnet pack
 ```
 
-### °²×°
+### å®‰è£…
 
 ```shell
 > dotnet new install XiaoFeng.Templates
 ```
 
-### ¸üĞÂ
+### æ›´æ–°
 
 ```shell
 > dotnet new install XiaoFeng.Templates --force
 ```
 
-### Ğ¶ÔØ
+### å¸è½½
 
 ```shell
 > dotnet new uninstall XiaoFeng.Templates
 ```
 
-## ÎÄµµ
+## æ–‡æ¡£
 
-### ÏîÄ¿Ä£°å½Ì³Ì¼°ÊµÀı
+### é¡¹ç›®æ¨¡æ¿æ•™ç¨‹åŠå®ä¾‹
 
-| ¹¦ÄÜ | ÍøÖ· |
+| åŠŸèƒ½ | ç½‘å€ |
 |:--|:--|
-|½Ì³Ì|[ÏîÄ¿Ä£°å½Ì³ÌÍøÖ·](https://learn.microsoft.com/zh-cn/dotnet/core/tutorials/cli-templates-create-item-template)|
-|ÊµÀı|[ÏîÄ¿Ä£°åÊµÀıÍøÖ·](https://github.com/dotnet/templating)|
+|æ•™ç¨‹|[é¡¹ç›®æ¨¡æ¿æ•™ç¨‹ç½‘å€](https://learn.microsoft.com/zh-cn/dotnet/core/tutorials/cli-templates-create-item-template)|
+|å®ä¾‹|[é¡¹ç›®æ¨¡æ¿å®ä¾‹ç½‘å€](https://github.com/dotnet/templating)|
 
