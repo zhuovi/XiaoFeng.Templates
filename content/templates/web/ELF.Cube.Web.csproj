@@ -6,6 +6,8 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<XiaoFengMvc></XiaoFengMvc>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>ELF.Cube.Web.xml</DocumentationFile>
 		<!--#if (SupportDocker)-->
 		<DockerDefaultTargetOS>DockerOSParameter</DockerDefaultTargetOS>
 		<!--#if (DockerType == ".NET SDK") -->
