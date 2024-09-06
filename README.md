@@ -1,6 +1,6 @@
 # XiaoFeng.Templates
 
-![fayelf](https://camo.githubusercontent.com/4fb01e4715af3d34835b6872ef93a6b21c5371337d44c410d32e8d7c208e196a/68747470733a2f2f7777772e65656c662e636e2f6c6f676f782e706e67)
+![fayelf](https://github.com/user-attachments/assets/7f0768d2-62a8-45bd-8246-49688d9a05ad)
 
 ![GitHub top language](https://img.shields.io/github/languages/top/zhuovi/xiaofeng?logo=github)
 ![GitHub License](https://img.shields.io/github/license/zhuovi/xiaofeng?logo=github)
@@ -25,7 +25,7 @@ Nuget：XiaoFeng.Mvc.Templates
 | 名称   | LOGO   |
 | :----: | :----: |
 |JetBrains|[![JetBrains](https://github.com/user-attachments/assets/e7fae613-0d85-4c13-be9a-ec343fc30e63)](https://jb.gg/OpenSourceSupport)|
-|Visual Studio| [![Visual Studio](https://camo.githubusercontent.com/062bd93be4d796bb609715f79a861eac611ae9e43cf29e7d652f49b306c16b19/68747470733a2f2f76697375616c73747564696f2e6d6963726f736f66742e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032312f31302f50726f647563742d49636f6e2e737667)](https://visualstudio.microsoft.com/)|
+|Visual Studio| [![Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2021/10/Product-Icon.svg)](https://visualstudio.microsoft.com/)|
 
 ## XiaoFeng
 
