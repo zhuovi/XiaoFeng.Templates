@@ -36,7 +36,7 @@ XiaoFeng generator with [XiaoFeng](https://github.com/zhuovi/XiaoFeng).
 .NET CLI
 
 ```shell
-> dotnet new install XiaoFeng.Templates::1.0.0
+> dotnet new install XiaoFeng.Templates::1.0.1
 ```
 
 # XiaoFeng 类库包含库
