@@ -22,6 +22,10 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "net5.0",
+          "description": "net5.0"
+        },
+        {
           "choice": "net6.0",
           "description": "net6.0"
         },
@@ -99,6 +103,11 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "5.2.1",
+          "displayName": "XiaoFeng 5.2.1",
+          "description": "XiaoFeng 5.2.1"
+        },
+        {
           "choice": "5.2.0",
           "displayName": "XiaoFeng 5.2.0",
           "description": "XiaoFeng 5.2.0"
@@ -120,7 +129,7 @@
         }
       ],
       "replaces": "XiaoFengVersion",
-      "defaultValue": "5.2.0"
+      "defaultValue": "5.2.1"
     },
     "XiaoFeng Location": {
       "type": "parameter",
@@ -176,28 +185,38 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "no",
+          "displayName": "无",
+          "description": "无"
+        },
+        {
           "choice": "SQLite",
+          "displayName": "SQLite",
           "description": "SQLite"
         },
         {
           "choice": "SqlServer",
+          "displayName": "SqlServer",
           "description": "SqlServer"
         },
         {
           "choice": "MySql",
+          "displayName": "MySql",
           "description": "MySql"
         },
         {
           "choice": "Oracle",
+          "displayName": "Oracle",
           "description": "Oracle"
         },
         {
           "choice": "Dameng",
+          "displayName": "Dameng",
           "description": "Dameng"
         }
       ],
       "replaces": "ELFDbProvider",
-      "defaultValue": "SQLite",
+      "defaultValue": "no",
       "allowMultipleValues": true
     },
     "UserSecertId": {

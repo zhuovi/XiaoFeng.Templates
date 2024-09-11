@@ -2,11 +2,11 @@
 
 ![fayelf](https://github.com/user-attachments/assets/7f0768d2-62a8-45bd-8246-49688d9a05ad)
 
-![GitHub top language](https://img.shields.io/github/languages/top/zhuovi/xiaofeng?logo=github)
-![GitHub License](https://img.shields.io/github/license/zhuovi/xiaofeng?logo=github)
-![Nuget Downloads](https://img.shields.io/nuget/dt/xiaofeng?logo=nuget)
-![Nuget](https://img.shields.io/nuget/v/xiaofeng?logo=nuget)
-![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/xiaofeng?label=dev%20nuget&logo=nuget)
+![GitHub top language](https://img.shields.io/github/languages/top/zhuovi/xiaofeng.Templates?logo=github)
+![GitHub License](https://img.shields.io/github/license/zhuovi/xiaofeng.Templates?logo=github)
+![Nuget Downloads](https://img.shields.io/nuget/dt/xiaofeng.Templates?logo=nuget)
+![Nuget](https://img.shields.io/nuget/v/xiaofeng.Templates?logo=nuget)
+![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/xiaofeng.Templates?label=dev%20nuget&logo=nuget)
 
 Nuget：XiaoFeng.Mvc.Templates
 
@@ -36,7 +36,7 @@ XiaoFeng generator with [XiaoFeng](https://github.com/zhuovi/XiaoFeng).
 .NET CLI
 
 ```shell
-> dotnet new install XiaoFeng.Templates::1.0.1
+> dotnet new install XiaoFeng.Templates::1.0.2
 ```
 
 # XiaoFeng 类库包含库
@@ -112,6 +112,14 @@ E:\Work\XiaoFeng.Templates> dotnet pack
 
 
 ## 升级日志
+
+## 2024-09-10	v 1.0.2
+
+1.Web项目增加生成xml项;
+
+2.增加XiaoFeng引用版本 5.2.1
+
+3.Web项目增加 XiaoFeng.Mvc 引用版本 5.1.2
 
 ## 2024-09-06   v 1.0.1
 
