@@ -20,7 +20,8 @@
 	<!--全局引用-->
 	<ItemGroup
 		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR　'$(TargetFramework)'=='net8.0'">
-		<Using Include="XiaoFeng.Mvc;XiaoFeng.Json;XiaoFeng.Xml;Microsoft.AspNetCore.Builder;Microsoft.Extensions.DependencyInjection;" />
+		<Using
+			Include="XiaoFeng.Mvc;XiaoFeng.Json;XiaoFeng.Xml;Microsoft.AspNetCore.Builder;Microsoft.Extensions.DependencyInjection;" />
 	</ItemGroup>
 	<!--输出目录配置-->
 	<ItemGroup Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'">
@@ -31,24 +32,30 @@
 	</ItemGroup>
 	<!--数据库引用-->
 	<ItemGroup>
-		<!--#if (DbProvider == SQLite) -->
+		<!--#if
+		(DbProvider == SQLite) -->
 		<PackageReference Include="Stub.System.Data.SQLite.Core.NetStandard" Version="1.0.118" />
 		<!--#endif-->
-		<!--#if (DbProvider == MySql) -->
+		<!--#if
+		(DbProvider == MySql) -->
 		<PackageReference Include="MySql.Data" Version="9.0.0" />
 		<!--#endif-->
-		<!--#if (DbProvider == Oracle) -->
+		<!--#if
+		(DbProvider == Oracle) -->
 		<PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.5.1" />
 		<!--#endif-->
-		<!--#if (DbProvider == SqlServer) -->
-		<PackageReference Include="Microsoft.SqlServer.Server" Version="1.0.0" />
+		<!--#if
+		(DbProvider == SqlServer) -->
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
 		<!--#endif-->
-		<!--#if (DbProvider == Dameng) -->
+		<!--#if
+		(DbProvider == Dameng) -->
 		<PackageReference Include="DM.DmProvider" Version="8.3.1.25526" />
 		<!--#endif-->
 	</ItemGroup>
 	<!--XiaoFeng.Mvc项目引用-->
-	<!--#if (XiaoFengLocation != "") -->
+	<!--#if
+	(XiaoFengLocation != "") -->
 	<ItemGroup Condition="$(XiaoFengMvc) == 'Debug'">
 		<ProjectReference Include="XiaoFengMvcLocation" />
 	</ItemGroup>
