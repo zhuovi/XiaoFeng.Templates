@@ -100,6 +100,11 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "5.2.0",
+          "displayName": "XiaoFeng.Mvc 5.2.0",
+          "description": "XiaoFeng.Mvc 5.2.0"
+        },
+        {
           "choice": "5.1.3",
           "displayName": "XiaoFeng.Mvc 5.1.3",
           "description": "XiaoFeng.Mvc 5.1.3"
@@ -121,7 +126,7 @@
         }
       ],
       "replaces": "XiaoFengMvcVersion",
-      "defaultValue": "5.1.3"
+      "defaultValue": "5.2.0"
     },
     "XiaoFeng.Mvc Location": {
       "type": "parameter",
@@ -137,6 +142,11 @@
       "displayName": "XiaoFeng 类库版本",
       "datatype": "choice",
       "choices": [
+        {
+          "choice": "5.2.3",
+          "displayName": "XiaoFeng 5.2.3",
+          "description": "XiaoFeng 5.2.3"
+        },
         {
           "choice": "5.2.2",
           "displayName": "XiaoFeng 5.2.2",
@@ -169,7 +179,7 @@
         }
       ],
       "replaces": "XiaoFengVersion",
-      "defaultValue": "5.2.2"
+      "defaultValue": "5.2.3"
     },
     "XiaoFeng Location": {
       "type": "parameter",
@@ -241,7 +251,7 @@
         }
       ],
       "replaces": "ELFDbProvider",
-      "defaultValue": "no",
+      "defaultValue": "SQLite",
       "allowMultipleValues": true
     },
     "UserSecertId": {

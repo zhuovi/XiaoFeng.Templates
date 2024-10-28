@@ -103,6 +103,11 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "5.2.3",
+          "displayName": "XiaoFeng 5.2.3",
+          "description": "XiaoFeng 5.2.3"
+        },
+        {
           "choice": "5.2.2",
           "displayName": "XiaoFeng 5.2.2",
           "description": "XiaoFeng 5.2.2"
@@ -134,7 +139,7 @@
         }
       ],
       "replaces": "XiaoFengVersion",
-      "defaultValue": "5.2.2"
+      "defaultValue": "5.2.3"
     },
     "XiaoFeng Location": {
       "type": "parameter",

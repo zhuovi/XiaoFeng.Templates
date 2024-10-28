@@ -15,5 +15,22 @@
 	<ItemGroup Condition="$(XiaoFengMqtt) != 'Debug'">
 		<PackageReference Include="XiaoFeng.Mqtt" Version="XiaoFengMqttVersion" />
 	</ItemGroup>
-
+	<!--数据库引用-->
+	<ItemGroup>
+		<!--#if (DbProvider == SQLite) -->
+		<PackageReference Include="Stub.System.Data.SQLite.Core.NetStandard" Version="1.0.118" />
+		<!--#endif-->
+		<!--#if	(DbProvider == MySql) -->
+		<PackageReference Include="MySql.Data" Version="9.0.0" />
+		<!--#endif-->
+		<!--#if (DbProvider	== Oracle) -->
+		<PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.5.1" />
+		<!--#endif-->
+		<!--#if	(DbProvider	== SqlServer) -->
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+		<!--#endif-->
+		<!--#if	(DbProvider	== Dameng) -->
+		<PackageReference Include="DM.DmProvider" Version="8.3.1.25526" />
+		<!--#endif-->
+	</ItemGroup>
 </Project>
