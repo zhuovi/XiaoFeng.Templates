@@ -49,12 +49,13 @@
 		<!--#endif-->
 	</ItemGroup>
 	<!--XiaoFeng.Mvc项目引用-->
-	<!--#if
-	(XiaoFengLocation != "") -->
 	<ItemGroup Condition="$(XiaoFengMvc) == 'Debug'">
+		<!--#if	(XiaoFengLocation != "") -->
 		<ProjectReference Include="XiaoFengMvcLocation" />
+		<!--#else-->
+		<PackageReference Include="XiaoFeng.Mvc" Version="XiaoFengMvcVersion" />
+		<!--#endif-->
 	</ItemGroup>
-	<!--#endif-->
 	<ItemGroup Condition="$(XiaoFengMvc) != 'Debug'">
 		<PackageReference Include="XiaoFeng.Mvc" Version="XiaoFengMvcVersion" />
 	</ItemGroup>

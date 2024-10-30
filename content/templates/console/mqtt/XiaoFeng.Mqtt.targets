@@ -12,6 +12,13 @@
 		<ProjectReference Include="XiaoFengMqttLocation" />
 	</ItemGroup>
 	<!--#endif-->
+	<ItemGroup Condition="$(XiaoFengMqtt) == 'Debug'">
+		<!--#if (XiaoFengMqttLocation != "") -->
+		<ProjectReference Include="XiaoFengMqttLocation" />
+		<!--#else-->
+		<PackageReference Include="XiaoFeng.Mqtt" Version="XiaoFengMqttVersion" />
+		<!--#endif-->
+	</ItemGroup>
 	<ItemGroup Condition="$(XiaoFengMqtt) != 'Debug'">
 		<PackageReference Include="XiaoFeng.Mqtt" Version="XiaoFengMqttVersion" />
 	</ItemGroup>
