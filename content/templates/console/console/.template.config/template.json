@@ -185,6 +185,16 @@
           "choice": "Dameng",
           "displayName": "Dameng",
           "description": "Dameng"
+        },
+        {
+          "choice": "Redis",
+          "displayName": "Redis",
+          "description": "Redis"
+        },
+        {
+          "choice": "Memcached",
+          "displayName": "Memcached",
+          "description": "Memcached"
         }
       ],
       "replaces": "ELFDbProvider",

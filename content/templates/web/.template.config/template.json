@@ -196,6 +196,31 @@
       "datatype": "bool",
       "defaultValue": "false"
     },
+    "EnableAdminAccount": {
+      "type": "parameter",
+      "description": "是否启用超级管理员",
+      "displayName": "是否启用超级管理员",
+      "datatype": "bool",
+      "defaultValue": "false"
+    },
+    "AdminAccount": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "超级管理员账号",
+      "displayName": "超级管理员账号",
+      "replaces": "AdminAccount",
+      "defaultValue": "",
+      "isEnabled": "(EnableAdminAccount == true)"
+    },
+    "AdminPassword": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "超级管理员密码",
+      "displayName": "超级管理员密码",
+      "replaces": "AdminPassword",
+      "defaultValue": "",
+      "isEnabled": "(EnableAdminAccount == true)"
+    },
     "HttpPort": {
       "type": "parameter",
       "description": "HTTP 监听端口",
@@ -248,6 +273,16 @@
           "choice": "Dameng",
           "displayName": "Dameng",
           "description": "Dameng"
+        },
+        {
+          "choice": "Redis",
+          "displayName": "Redis",
+          "description": "Redis"
+        },
+        {
+          "choice": "Memcached",
+          "displayName": "Memcached",
+          "description": "Memcached"
         }
       ],
       "replaces": "ELFDbProvider",

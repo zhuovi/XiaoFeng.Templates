@@ -1,18 +1,18 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "eelf.cn",
-  "classifications": [ "Console", "Windows", "Linux", "XiaoFeng", "ELF", "Socket", "Socket Client","Socket Server" ],
-  "identity": "XiaoFeng.Console.Socket",
-  "name": "XiaoFeng Socket",
-  "shortName": "elf.socket",
-  "description": "用于创建可在 Windows、Linux 和 macOS 上运行的命令行应用程序的项目，默认依赖于 XiaoFeng 类库。默认创建Socket Client,Socket Server代码。",
+  "classifications": [ "Library", "Windows", "Linux", "XiaoFeng", "ELF" ],
+  "identity": "XiaoFeng.Library",
+  "name": "XiaoFeng Library",
+  "shortName": "elf.library",
+  "description": "用于创建面向 .NET 或 .NET Standard 的类库项目，默认依赖于 XiaoFeng 类库。",
   "tags": {
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "ELF.Cube.Socket",
+  "sourceName": "ELF.Cube.Library",
   "preferNameDirectory": true,
-  "defaultName": "ELF.Cube.Socket",
+  "defaultName": "ELF.Cube.Library",
   "symbols": {
     "Framework": {
       "type": "parameter",
@@ -21,6 +21,14 @@
       "enableQuotelessLiterals": true,
       "datatype": "choice",
       "choices": [
+        {
+          "choice": "netstandard2.0",
+          "description": ".NET Standard 2.0"
+        },
+        {
+          "choice": "netstandard2.1",
+          "description": ".NET Standard 2.1"
+        },
         {
           "choice": "net5.0",
           "description": "net5.0"
@@ -44,57 +52,6 @@
       ],
       "replaces": "FrameworkParameter",
       "defaultValue": "net8.0"
-    },
-    "SupportDocker": {
-      "type": "parameter",
-      "datatype": "bool",
-      "description": "启用容器支持",
-      "displayName": "启用容器支持",
-      "defaultValue": "false",
-      "enableQuotelessLiterals": true
-    },
-    "DockerOS": {
-      "type": "parameter",
-      "description": "容器 OS",
-      "displayName": "容器 OS",
-      "datatype": "choice",
-      "choices": [
-        {
-          "choice": "Windows",
-          "description": "Windows",
-          "displayName": "Windows"
-        },
-        {
-          "choice": "Linux",
-          "description": "Linux",
-          "displayName": "Linux"
-        }
-      ],
-      "defaultValue": "Linux",
-      "replaces": "DockerOSParameter",
-      "isEnabled": "(SupportDocker == true)"
-    },
-    "DockerType": {
-      "type": "parameter",
-      "datatype": "choice",
-      "description": "容器生成类型",
-      "displayName": "容器生成类型",
-      "choices": [
-        {
-          "choice": "Dockerfile",
-          "description": "Dockerfile",
-          "displayName": "Dockerfile"
-        }
-      ],
-      "isEnabled": "(SupportDocker == true)"
-    },
-    "NativeAOT": {
-      "type": "parameter",
-      "datatype": "bool",
-      "description": "启用 native AOT 发布",
-      "displayName": "启用 native AOT 发布",
-      "defaultValue": "false",
-      "isEnabled": "(Framework == \"net8.0\" || Framework == \"9.0\")"
     },
     "XiaoFeng Version": {
       "type": "parameter",
@@ -200,28 +157,11 @@
       "replaces": "ELFDbProvider",
       "defaultValue": "no",
       "allowMultipleValues": true
-    },
-    "UserSecertId": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "ELFUserSecretsId"
     }
   },
   "primaryOutputs": [
     {
-      "path": "ELF.Cube.Socket.csproj"
-    }
-  ],
-  "sources": [
-    {
-      "modifiers": [
-        {
-          "condition": "(!SupportDocker)",
-          "exclude": [
-            "Dockerfile"
-          ]
-        }
-      ]
+      "path": "ELF.Cube.Library.csproj"
     }
   ]
 }
