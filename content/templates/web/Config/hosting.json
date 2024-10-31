@@ -93,7 +93,7 @@
   },
   "Settings": {
     "IsRuning": true,
-    "Init": false,
+    "Init": true,
     //#if (EnableAdmin)
     "EnableAdmin": true,
     //#else
@@ -108,7 +108,7 @@
     //#else
     "EnableAdministrator": false,
     //#endif
-    "Administrator": "9B76E4C95D2CFA2CFD55D119BCC37119586AAFD838D60561A8396ED00FF2D4AC"
+    "Administrator": "Account=AdminAccount;Password=AdminPassword"
   },
   "Copyright": {
     "Author": "Jacky",
@@ -126,8 +126,8 @@
     "Api": "5.1"
   },
   "ModelData": {
-    "Key": "FayElf.Cube.CMS",
-    "NameSpace": "FayElf.CMS.Model",
-    "Path": "../FayElf.CMS.Model/Model"
+    "Key": "ELF.Cube.Model",
+    "NameSpace": "ELF.Cube.Model",
+    "Path": "../ELF.Cube.Model/Model"
   }
 }

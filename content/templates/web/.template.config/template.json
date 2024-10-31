@@ -191,8 +191,8 @@
     },
     "EnableAdmin": {
       "type": "parameter",
-      "description": "是否启用后台",
-      "displayName": "是否启用后台",
+      "description": "是否启用后台(账号:admin,密码:admin123456)",
+      "displayName": "是否启用后台(账号:admin,密码:admin123456)",
       "datatype": "bool",
       "defaultValue": "false"
     },
