@@ -22,10 +22,6 @@
       "datatype": "choice",
       "choices": [
         {
-          "choice": "net5.0",
-          "description": "net5.0"
-        },
-        {
           "choice": "net6.0",
           "description": "net6.0"
         },
@@ -93,7 +89,7 @@
       ],
       "isEnabled": "(SupportDocker == true)"
     },
-    "XiaoFeng.Mvc Version": {
+    "XiaoFengMvcVersion": {
       "type": "parameter",
       "description": "XiaoFeng.Mvc 框架版本",
       "displayName": "XiaoFeng.Mvc 框架版本",
@@ -125,18 +121,18 @@
           "description": "XiaoFeng.Mvc 5.1.0"
         }
       ],
-      "replaces": "XiaoFengMvcVersion",
+      "replaces": "ELFXiaoFengMvcVersion",
       "defaultValue": "5.2.0"
     },
-    "XiaoFeng.Mvc Location": {
+    "XiaoFengMvcLocation": {
       "type": "parameter",
-      "description": "XiaoFeng.Mvc 本地项目地址",
-      "displayName": "XiaoFeng.Mvc 本地项目地址",
+      "description": "XiaoFeng.Mvc 本地类库项目路径，如：E:\\Work\\XiaoFeng.Mvc\\XiaoFeng.Mvc.csproj",
+      "displayName": "XiaoFeng.Mvc 本地类库项目路径",
       "datatype": "text",
-      "replaces": "XiaoFengMvcLocation",
-      "defaultValue": "E:\\Work\\XiaoFeng.Mvc\\XiaoFeng.Mvc.csproj"
+      "replaces": "ELFXiaoFengMvcLocation",
+      "defaultValue": ""
     },
-    "XiaoFeng Version": {
+    "XiaoFengVersion": {
       "type": "parameter",
       "description": "XiaoFeng 类库版本",
       "displayName": "XiaoFeng 类库版本",
@@ -178,48 +174,50 @@
           "description": "XiaoFeng 5.0.4"
         }
       ],
-      "replaces": "XiaoFengVersion",
+      "replaces": "ELFXiaoFengVersion",
       "defaultValue": "5.2.3"
     },
-    "XiaoFeng Location": {
+    "XiaoFengLocation": {
       "type": "parameter",
       "datatype": "text",
-      "description": "XiaoFeng 本地项目地址",
-      "displayName": "XiaoFeng 本地项目地址",
-      "replaces": "XiaoFengLocation",
-      "defaultValue": "E:\\Work\\XiaoFeng\\XiaoFeng.csproj"
+      "description": "XiaoFeng 本地类库项目路径，如：E:\\Work\\XiaoFeng\\XiaoFeng.csproj",
+      "displayName": "XiaoFeng 本地类库项目路径",
+      "replaces": "ELFXiaoFengLocation",
+      "defaultValue": ""
     },
-    "EnableAdmin": {
+    "ELFEnableAdmin": {
       "type": "parameter",
-      "description": "是否启用后台(账号:admin,密码:admin123456)",
-      "displayName": "是否启用后台(账号:admin,密码:admin123456)",
+      "description": "启用管理后台，后台默认账号:admin 默认密码:admin123456",
+      "displayName": "启用管理后台(账号:admin,密码:admin123456)",
       "datatype": "bool",
-      "defaultValue": "false"
+      "defaultValue": "false",
+      "enableQuotelessLiterals": true
     },
-    "EnableAdminAccount": {
+    "ELFEnableAccount": {
       "type": "parameter",
-      "description": "是否启用超级管理员",
-      "displayName": "是否启用超级管理员",
+      "description": "启用超级管理员，启用了超级管理员，后台登录直接用当前超级管理员账号及密码登录后台，权限是最大的，适合调试期间使用，正式上线后建议关闭当前配置。",
+      "displayName": "启用超级管理员",
       "datatype": "bool",
-      "defaultValue": "false"
+      "defaultValue": "false",
+      "isEnabled": "(ELFEnableAdmin == true)"
     },
-    "AdminAccount": {
+    "ELFAdminAccount": {
       "type": "parameter",
       "datatype": "text",
       "description": "超级管理员账号",
       "displayName": "超级管理员账号",
-      "replaces": "AdminAccount",
+      "replaces": "ELFAdminAccount",
       "defaultValue": "",
-      "isEnabled": "(EnableAdminAccount == true)"
+      "isEnabled": "(ELFEnableAccount == true)"
     },
-    "AdminPassword": {
+    "ELFAdminPassword": {
       "type": "parameter",
       "datatype": "text",
       "description": "超级管理员密码",
       "displayName": "超级管理员密码",
-      "replaces": "AdminPassword",
+      "replaces": "ELFAdminPassword",
       "defaultValue": "",
-      "isEnabled": "(EnableAdminAccount == true)"
+      "isEnabled": "(ELFEnableAccount == true)"
     },
     "HttpPort": {
       "type": "parameter",
@@ -273,16 +271,6 @@
           "choice": "Dameng",
           "displayName": "Dameng",
           "description": "Dameng"
-        },
-        {
-          "choice": "Redis",
-          "displayName": "Redis",
-          "description": "Redis"
-        },
-        {
-          "choice": "Memcached",
-          "displayName": "Memcached",
-          "description": "Memcached"
         }
       ],
       "replaces": "ELFDbProvider",

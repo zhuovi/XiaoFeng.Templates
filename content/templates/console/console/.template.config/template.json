@@ -96,7 +96,7 @@
       "defaultValue": "false",
       "isEnabled": "(Framework == \"net8.0\" || Framework == \"9.0\")"
     },
-    "XiaoFeng Version": {
+    "XiaoFengVersion": {
       "type": "parameter",
       "description": "XiaoFeng 类库版本",
       "displayName": "XiaoFeng 类库版本",
@@ -138,16 +138,16 @@
           "description": "XiaoFeng 5.0.4"
         }
       ],
-      "replaces": "XiaoFengVersion",
+      "replaces": "ELFXiaoFengVersion",
       "defaultValue": "5.2.3"
     },
-    "XiaoFeng Location": {
+    "XiaoFengLocation": {
       "type": "parameter",
       "datatype": "text",
-      "description": "XiaoFeng 本地项目地址",
-      "displayName": "XiaoFeng 本地项目地址",
-      "replaces": "XiaoFengLocation",
-      "defaultValue": "E:\\Work\\XiaoFeng\\XiaoFeng.csproj"
+      "description": "XiaoFeng 本地类库项目路径，如：E:\\Work\\XiaoFeng\\XiaoFeng.csproj",
+      "displayName": "XiaoFeng 本地类库项目路径",
+      "replaces": "ELFXiaoFengLocation",
+      "defaultValue": ""
     },
     "DbProvider": {
       "type": "parameter",
@@ -185,16 +185,6 @@
           "choice": "Dameng",
           "displayName": "Dameng",
           "description": "Dameng"
-        },
-        {
-          "choice": "Redis",
-          "displayName": "Redis",
-          "description": "Redis"
-        },
-        {
-          "choice": "Memcached",
-          "displayName": "Memcached",
-          "description": "Memcached"
         }
       ],
       "replaces": "ELFDbProvider",

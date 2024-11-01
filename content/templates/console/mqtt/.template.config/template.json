@@ -96,7 +96,7 @@
       "defaultValue": "false",
       "isEnabled": "(Framework == \"net8.0\" || Framework == \"9.0\")"
     },
-    "XiaoFeng Version": {
+    "XiaoFengVersion": {
       "type": "parameter",
       "description": "XiaoFeng 类库版本",
       "displayName": "XiaoFeng 类库版本",
@@ -138,18 +138,18 @@
           "description": "XiaoFeng 5.0.4"
         }
       ],
-      "replaces": "XiaoFengVersion",
+      "replaces": "ELFXiaoFengVersion",
       "defaultValue": "5.2.3"
     },
-    "XiaoFeng Location": {
+    "XiaoFengLocation": {
       "type": "parameter",
       "datatype": "text",
-      "description": "XiaoFeng 本地项目地址",
-      "displayName": "XiaoFeng 本地项目地址",
-      "replaces": "XiaoFengLocation",
-      "defaultValue": "E:\\Work\\XiaoFeng\\XiaoFeng.csproj"
+      "description": "XiaoFeng 本地类库项目路径，如：E:\\Work\\XiaoFeng\\XiaoFeng.csproj",
+      "displayName": "XiaoFeng 本地类库项目路径",
+      "replaces": "ELFXiaoFengLocation",
+      "defaultValue": ""
     },
-    "XiaoFeng.Mqtt Version": {
+    "XiaoFengMqttVersion": {
       "type": "parameter",
       "description": "XiaoFeng.Mqtt 类库版本",
       "displayName": "XiaoFeng.Mqtt 类库版本",
@@ -176,16 +176,16 @@
           "description": "XiaoFeng.Mqtt 1.0.0"
         }
       ],
-      "replaces": "XiaoFengMqttVersion",
+      "replaces": "ELFXiaoFengMqttVersion",
       "defaultValue": "1.0.3"
     },
-    "XiaoFeng.Mqtt Location": {
+    "XiaoFengMqttLocation": {
       "type": "parameter",
       "datatype": "text",
-      "description": "XiaoFeng.Mqtt本地项目地址",
-      "displayName": "XiaoFeng.Mqtt本地项目地址",
-      "replaces": "XiaoFengMqttLocation",
-      "defaultValue": "E:\\Work\\XiaoFeng.Mqtt\\XiaoFeng.Mqtt.csproj"
+      "description": "XiaoFeng.Mqtt本地类库项目路径，如：E:\\Work\\XiaoFeng.Mqtt\\XiaoFeng.Mqtt.csproj",
+      "displayName": "XiaoFeng.Mqtt本地类库项目路径，如：E:\\Work\\XiaoFeng.Mqtt\\XiaoFeng.Mqtt.csproj",
+      "replaces": "ELFXiaoFengMqttLocation",
+      "defaultValue": ""
     },
     "DbProvider": {
       "type": "parameter",
@@ -223,16 +223,6 @@
           "choice": "Dameng",
           "displayName": "Dameng",
           "description": "Dameng"
-        },
-        {
-          "choice": "Redis",
-          "displayName": "Redis",
-          "description": "Redis"
-        },
-        {
-          "choice": "Memcached",
-          "displayName": "Memcached",
-          "description": "Memcached"
         }
       ],
       "replaces": "ELFDbProvider",

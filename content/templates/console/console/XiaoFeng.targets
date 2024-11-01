@@ -27,14 +27,12 @@
 		<Using Remove="System.Net.Http.Json;Microsoft.AspNetCore.Http;" />
 	</ItemGroup>
 	<!--XiaoFeng 项目引用-->
-	<ItemGroup Condition="$(XiaoFeng) == 'Debug'">
-		<!--#if (XiaoFengLocation != "") -->
-		<ProjectReference Include="XiaoFengLocation" />
+	<ItemGroup>
+		<!--#if	(XiaoFengLocation != "") -->
+		<ProjectReference Include="ELFXiaoFengLocation" Condition="$(XiaoFeng) == 'Debug'" />
+		<PackageReference Include="XiaoFeng" Version="ELFXiaoFengVersion" Condition="$(XiaoFeng) != 'Debug'" />
 		<!--#else-->
-		<PackageReference Include="XiaoFeng" Version="XiaoFengVersion" />
+		<PackageReference Include="XiaoFeng" Version="ELFXiaoFengVersion" />
 		<!--#endif-->
-	</ItemGroup>
-	<ItemGroup Condition="$(XiaoFeng) != 'Debug'">
-		<PackageReference Include="XiaoFeng" Version="XiaoFengVersion" />
 	</ItemGroup>
 </Project>

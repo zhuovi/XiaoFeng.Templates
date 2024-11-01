@@ -12,15 +12,13 @@
 		<ProjectReference Include="XiaoFengMqttLocation" />
 	</ItemGroup>
 	<!--#endif-->
-	<ItemGroup Condition="$(XiaoFengMqtt) == 'Debug'">
-		<!--#if (XiaoFengMqttLocation != "") -->
-		<ProjectReference Include="XiaoFengMqttLocation" />
+	<ItemGroup>
+		<!--#if	(XiaoFengMqttLocation != "") -->
+		<ProjectReference Include="ELFXiaoFengMqttLocation" Condition="$(XiaoFengMqtt) == 'Debug'" />
+		<PackageReference Include="XiaoFeng.Mqtt" Version="ELFXiaoFengMqttVersion" Condition="$(XiaoFengMqtt) != 'Debug'" />
 		<!--#else-->
-		<PackageReference Include="XiaoFeng.Mqtt" Version="XiaoFengMqttVersion" />
+		<PackageReference Include="XiaoFeng.Mqtt" Version="ELFXiaoFengMqttVersion" />
 		<!--#endif-->
-	</ItemGroup>
-	<ItemGroup Condition="$(XiaoFengMqtt) != 'Debug'">
-		<PackageReference Include="XiaoFeng.Mqtt" Version="XiaoFengMqttVersion" />
 	</ItemGroup>
 	<!--数据库引用-->
 	<ItemGroup>

@@ -94,7 +94,7 @@
   "Settings": {
     "IsRuning": true,
     "Init": true,
-    //#if (EnableAdmin)
+    //#if (ELFEnableAdmin)
     "EnableAdmin": true,
     //#else
     "EnableAdmin": false,
@@ -103,12 +103,12 @@
     "CloseDescription": "网站未授权...",
     "AdminHome": "",
     "VirtalFolder": "",
-    //#if (EnableAdmin)
+    //#if (ELFEnableAdminAccount)
     "EnableAdministrator": true,
     //#else
     "EnableAdministrator": false,
     //#endif
-    "Administrator": "Account=AdminAccount;Password=AdminPassword"
+    "Administrator": "Account=ELFAdminAccount;Password=ELFAdminPassword"
   },
   "Copyright": {
     "Author": "Jacky",

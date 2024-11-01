@@ -49,15 +49,13 @@
 		<!--#endif-->
 	</ItemGroup>
 	<!--XiaoFeng.Mvc项目引用-->
-	<ItemGroup Condition="$(XiaoFengMvc) == 'Debug'">
-		<!--#if	(XiaoFengLocation != "") -->
-		<ProjectReference Include="XiaoFengMvcLocation" />
+	<ItemGroup>
+		<!--#if	(XiaoFengMvcLocation != "") -->
+		<ProjectReference Include="ELFXiaoFengMvcLocation" Condition="$(XiaoFengMvc) == 'Debug'" />
+		<PackageReference Include="XiaoFeng.Mvc" Version="ELFXiaoFengMvcVersion" Condition="$(XiaoFengMvc) != 'Debug'" />
 		<!--#else-->
-		<PackageReference Include="XiaoFeng.Mvc" Version="XiaoFengMvcVersion" />
+		<PackageReference Include="XiaoFeng.Mvc" Version="ELFXiaoFengMvcVersion" />
 		<!--#endif-->
-	</ItemGroup>
-	<ItemGroup Condition="$(XiaoFengMvc) != 'Debug'">
-		<PackageReference Include="XiaoFeng.Mvc" Version="XiaoFengMvcVersion" />
 	</ItemGroup>
 
 	<!--调试时启用运行时编译视图引用-->

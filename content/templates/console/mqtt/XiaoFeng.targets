@@ -29,12 +29,12 @@
 	<!--XiaoFeng 项目引用-->
 	<ItemGroup Condition="$(XiaoFeng) == 'Debug'">
 		<!--#if (XiaoFengLocation != "") -->
-		<ProjectReference Include="XiaoFengLocation" />
+		<ProjectReference Include="ELFXiaoFengLocation" />
 		<!--#else-->
-		<PackageReference Include="XiaoFeng" Version="XiaoFengVersion" />
+		<PackageReference Include="XiaoFeng" Version="ELFXiaoFengVersion" />
 		<!--#endif-->
 	</ItemGroup>
 	<ItemGroup Condition="$(XiaoFeng) != 'Debug'">
-		<PackageReference Include="XiaoFeng" Version="XiaoFengVersion" />
+		<PackageReference Include="XiaoFeng" Version="ELFXiaoFengVersion" />
 	</ItemGroup>
 </Project>
