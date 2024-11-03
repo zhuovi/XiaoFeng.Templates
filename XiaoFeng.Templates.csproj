@@ -26,7 +26,7 @@
 		<NoDefaultExcludes>true</NoDefaultExcludes>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageReleaseNotes>增加类库模板;增加创建web项目时可以设置超级管理员账号及密码;</PackageReleaseNotes>
+		<PackageReleaseNotes>增加类库模板;增加创建web项目时可以设置超级管理员账号及密码;设置后台数据库配置;</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<PropertyGroup>

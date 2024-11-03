@@ -36,7 +36,7 @@ XiaoFeng generator with [XiaoFeng](https://github.com/zhuovi/XiaoFeng).
 .NET CLI
 
 ```shell
-> dotnet new install XiaoFeng.Templates::1.0.3
+> dotnet new install XiaoFeng.Templates::1.0.5
 ```
 
 # XiaoFeng 类库包含库
@@ -113,11 +113,15 @@ E:\Work\XiaoFeng.Templates> dotnet pack
 
 ## 升级日志
 
-## 2024-11-01	v 1.0.4
+## 2024-11-03	v 1.0.5
 
 1.增加类库模板;
 
 2.增加创建web项目时可以设置超级管理员账号及密码;
+
+3.设置后台数据库配置;
+
+4.更新XiaoFeng.Mvc版本v5.1.6;
 
 ## 2024-10-17	v 1.0.3
 

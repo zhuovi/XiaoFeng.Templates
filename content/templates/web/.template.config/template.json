@@ -96,9 +96,9 @@
       "datatype": "choice",
       "choices": [
         {
-          "choice": "5.2.0",
-          "displayName": "XiaoFeng.Mvc 5.2.0",
-          "description": "XiaoFeng.Mvc 5.2.0"
+          "choice": "5.1.6",
+          "displayName": "XiaoFeng.Mvc 5.1.6",
+          "description": "XiaoFeng.Mvc 5.1.6"
         },
         {
           "choice": "5.1.3",
@@ -122,7 +122,7 @@
         }
       ],
       "replaces": "ELFXiaoFengMvcVersion",
-      "defaultValue": "5.2.0"
+      "defaultValue": "5.1.6"
     },
     "XiaoFengMvcLocation": {
       "type": "parameter",
@@ -191,6 +191,54 @@
       "displayName": "启用管理后台(账号:admin,密码:admin123456)",
       "datatype": "bool",
       "defaultValue": "false",
+      "enableQuotelessLiterals": true
+    },
+    "ELFAdminProviderType": {
+      "type": "parameter",
+      "description": "后台数据库类型",
+      "displayName": "后台数据库类型",
+      "enableQuotelessLiterals": true,
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "SQLite",
+          "displayName": "SQLite",
+          "description": "SQLite"
+        },
+        {
+          "choice": "SqlServer",
+          "displayName": "SqlServer",
+          "description": "SqlServer"
+        },
+        {
+          "choice": "MySql",
+          "displayName": "MySql",
+          "description": "MySql"
+        },
+        {
+          "choice": "Oracle",
+          "displayName": "Oracle",
+          "description": "Oracle"
+        },
+        {
+          "choice": "Dameng",
+          "displayName": "Dameng",
+          "description": "Dameng"
+        }
+      ],
+      "replaces": "ELFAdminDataProviderType",
+      "defaultValue": "SQLite",
+      "isRequired": true,
+      "isEnabled": "(ELFEnableAdmin == true)"
+    },
+    "ELFAdminConnectionString": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "后台数据库连接串,数据库连接字符串为空的话,默认为SQLite数据库",
+      "displayName": "后台数据库连接串,数据库连接字符串为空的话,默认为SQLite数据库。",
+      "replaces": "ELFAdminDataConnectionString",
+      "defaultValue": "",
+      "isEnabled": "(ELFEnableAdmin == true)",
       "enableQuotelessLiterals": true
     },
     "ELFEnableAccount": {
