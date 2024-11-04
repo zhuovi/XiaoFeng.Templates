@@ -1,4 +1,7 @@
 <Project ToolsVersion="1.0" xmlurl="http://nuget.fayelf.com/XiaoFeng.targets">
+	<PropertyGroup Condition="$(Configuration)=='Debug'">
+		<XiaoFeng>debug</XiaoFeng>
+	</PropertyGroup>
 	<PropertyGroup>
 		<!--版权配置-->
 		<Authors>Jacky</Authors>

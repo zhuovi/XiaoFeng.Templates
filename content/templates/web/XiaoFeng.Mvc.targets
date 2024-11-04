@@ -1,12 +1,11 @@
 <Project ToolsVersion="1.0" xmlurl="http://nuget.fayelf.com/XiaoFeng.targets">
+	<PropertyGroup Condition="$(Configuration)=='Debug'">
+		<XiaoFengMvc>debug</XiaoFengMvc>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(XiaoFengMvc)' == 'Debug'">
 		<RazorCompileOnBuild>false</RazorCompileOnBuild>
 		<RazorCompileOnPublish>false</RazorCompileOnPublish>
 		<XiaoFeng>Debug</XiaoFeng>
-	</PropertyGroup>
-	<PropertyGroup Condition="$(Configuration)=='Release' ">
-		<RazorCompileOnBuild>true</RazorCompileOnBuild>
-		<RazorCompileOnPublish>true</RazorCompileOnPublish>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(XiaoFengMvc)' != 'Debug'">
 		<RazorCompileOnBuild>true</RazorCompileOnBuild>
@@ -16,7 +15,7 @@
 	<PropertyGroup>
 		<DefineConstants>XiaoFengMvc;</DefineConstants>
 	</PropertyGroup>
-	<Import Project="XiaoFeng.targets" Version="1.0.0" />
+	<Import Project="XiaoFeng.targets" Version="1.0.1" />
 	<!--全局引用-->
 	<ItemGroup
 		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR　'$(TargetFramework)'=='net8.0'">

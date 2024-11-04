@@ -23,5 +23,8 @@
 		<!--#endif-->
 		<!--#endif-->
 	</PropertyGroup>
-	<Import Project="XiaoFeng.Mvc.targets" Version="1.0.0" />
+	<PropertyGroup Condition="$(Configuration) == 'Debug'">
+		<XiaoFengMvc>debug</XiaoFengMvc>
+	</PropertyGroup>
+	<Import Project="XiaoFeng.Mvc.targets" Version="1.0.1" />
 </Project>

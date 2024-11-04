@@ -9,7 +9,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<XiaoFeng></XiaoFeng>
 	</PropertyGroup>
-	<Import Project="XiaoFeng.targets" Version="1.0.0" />
+	<Import Project="XiaoFeng.targets" Version="1.0.1" />
 	<!--数据库引用-->
 	<ItemGroup>
 		<!--#if (DbProvider == SQLite) -->

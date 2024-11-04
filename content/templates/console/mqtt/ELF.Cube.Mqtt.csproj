@@ -17,5 +17,5 @@
 		<!--#endif-->
 		<XiaoFengMqtt></XiaoFengMqtt>
 	</PropertyGroup>
-	<Import Project="XiaoFeng.Mqtt.targets" Version="1.0.0" />
+	<Import Project="XiaoFeng.Mqtt.targets" Version="1.0.1" />
 </Project>
