@@ -108,7 +108,7 @@
     //#else
     "EnableAdministrator": false,
     //#endif
-    "Administrator": "Account=ELFAdminAccount;Password=ELFAdminPassword",
+    "Administrator": "Account=ELFAdminAccount;Password=ELFAdminPassword;",
     //#if (ELFAdminConnectionString == "")
     "AdminDbProviderType": "SQLite",
     //#else

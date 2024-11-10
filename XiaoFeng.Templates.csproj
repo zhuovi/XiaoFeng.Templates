@@ -3,7 +3,7 @@
 		<!-- The package metadata. Fill in the properties marked as TODO below -->
 		<!-- Follow the instructions on https://learn.microsoft.com/en-us/nuget/create-packages/package-authoring-best-practices -->
 		<PackageId>XiaoFeng.Templates</PackageId>
-		<PackageVersion>1.0.5</PackageVersion>
+		<PackageVersion>1.0.6</PackageVersion>
 		<Title>XiaoFeng.Mvc 低代码开发框架，Web 项目模板、Socket 项目模板、Mqtt 项目模板。</Title>
 		<Product>XiaoFeng.Mvc 低代码开发框架，Web 项目模板、Socket 项目模板、Mqtt 项目模板。</Product>
 		<Authors>Jacky</Authors>
@@ -26,7 +26,7 @@
 		<NoDefaultExcludes>true</NoDefaultExcludes>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageReleaseNotes>增加类库模板;增加创建web项目时可以设置超级管理员账号及密码;设置后台数据库配置;</PackageReleaseNotes>
+		<PackageReleaseNotes>增加引用类库版本;增加VS配置为Debug默认配置调试模式;调试模式下引用视图可编辑组件;</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<PropertyGroup>
