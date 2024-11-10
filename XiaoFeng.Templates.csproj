@@ -10,7 +10,7 @@
 		<Company>魔法精灵(www.eelf.cn)</Company>
 		<Description>通过Visual Studio 创建新项目，通过创建新项目时设置一些项目中的配置向导来完成创建XiaoFeng.Mvc框架的新项目。依赖XiaoFeng.Mvc 低代码开发框架及XiaoFeng核心底层类库，用于创建 ASP.NET Core 应用程序的项目模板。此模板还可以用于REST API、Socket 项目模板、Mqtt 项目模板、类库项目模板。</Description>
 		<Copyright>CopyRight © 2008-2025 魔法精灵(www.eelf.cn) QQ:7092734 Email:jacky@eelf.cn</Copyright>
-		<PackageTags>XiaoFeng;XiaoFeng.Mvc;ELF;Mqtt;Socket;Library;项目模板;</PackageTags>
+		<PackageTags>XiaoFeng;XiaoFeng.Mvc;ELF;Web;Mqtt;Socket;Library;项目模板;</PackageTags>
 		<PackageProjectUrl>https://www.eelf.cn</PackageProjectUrl>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/zhuovi/XiaoFeng.Mvc.Templates</RepositoryUrl>

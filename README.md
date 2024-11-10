@@ -36,7 +36,7 @@ XiaoFeng generator with [XiaoFeng](https://github.com/zhuovi/XiaoFeng).
 .NET CLI
 
 ```shell
-> dotnet new install XiaoFeng.Templates::1.0.5
+> dotnet new install XiaoFeng.Templates::1.0.6
 ```
 
 # XiaoFeng 类库包含库
@@ -112,6 +112,14 @@ E:\Work\XiaoFeng.Templates> dotnet pack
 
 
 ## 升级日志
+
+## 2024-11-10	v 1.0.6
+
+1.增加引用类库版本;
+
+2.增加VS配置为Debug默认配置调试模式;
+
+3.调试模式下引用视图可编辑组件;
 
 ## 2024-11-03	v 1.0.5
 
