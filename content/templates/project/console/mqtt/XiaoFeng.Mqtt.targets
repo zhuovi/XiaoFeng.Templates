@@ -1,0 +1,44 @@
+<Project ToolsVersion="1.0" xmlurl="http://nuget.fayelf.com/XiaoFeng.targets">
+	<PropertyGroup Condition="$(Configuration)=='Debug'">
+		<XiaoFengMqtt>debug</XiaoFengMqtt>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(XiaoFengMqtt)' == 'Debug'">
+		<XiaoFeng>Debug</XiaoFeng>
+	</PropertyGroup>
+	<PropertyGroup>
+		<DefineConstants>XiaoFengMqtt;</DefineConstants>
+	</PropertyGroup>
+	<Import Project="XiaoFeng.targets" Version="1.0.2" />
+	<!--XiaoFeng.Mqtt项目引用-->
+	<!--#if (XiaoFengMqttLocation != "") -->
+	<ItemGroup Condition="$(XiaoFengMqtt) == 'Debug'">
+		<ProjectReference Include="XiaoFengMqttLocation" />
+	</ItemGroup>
+	<!--#endif-->
+	<ItemGroup>
+		<!--#if	(XiaoFengMqttLocation != "") -->
+		<ProjectReference Include="ELFXiaoFengMqttLocation" Condition="$(XiaoFengMqtt) == 'Debug'" />
+		<PackageReference Include="XiaoFeng.Mqtt" Version="ELFXiaoFengMqttVersion" Condition="$(XiaoFengMqtt) != 'Debug'" />
+		<!--#else-->
+		<PackageReference Include="XiaoFeng.Mqtt" Version="ELFXiaoFengMqttVersion" />
+		<!--#endif-->
+	</ItemGroup>
+	<!--数据库引用-->
+	<ItemGroup>
+		<!--#if (DbProvider == SQLite) -->
+		<PackageReference Include="Stub.System.Data.SQLite.Core.NetStandard" Version="1.0.119" />
+		<!--#endif-->
+		<!--#if	(DbProvider == MySql) -->
+		<PackageReference Include="MySql.Data" Version="9.1.0" />
+		<!--#endif-->
+		<!--#if (DbProvider	== Oracle) -->
+		<PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.6.1" />
+		<!--#endif-->
+		<!--#if	(DbProvider	== SqlServer) -->
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+		<!--#endif-->
+		<!--#if	(DbProvider	== Dameng) -->
+		<PackageReference Include="DM.DmProvider" Version="8.3.1.30495" />
+		<!--#endif-->
+	</ItemGroup>
+</Project>

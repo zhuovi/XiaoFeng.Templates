@@ -1,0 +1,139 @@
+{
+  "Kestrel": {
+    "Limits": {
+      "MaxConcurrentConnections": 1000000,
+      "MaxConcurrentUpgradedConnections": 100000,
+      "MaxRequestBodySize": 10485760,
+      "MaxRequestBufferSize": 10485760,
+      "MaxRequestHeaderCount": 100,
+      "MaxRequestHeadersTotalSize": 32768,
+      "MaxRequestLineSize": 8192,
+      "MaxResponseBufferSize": 65536,
+      "KeepAliveTimeout": "0.00:05:00",
+      "RequestHeadersTimeout": "0.00:00:30",
+      "MinRequestBodyDataRate": {
+        "BytesPerSecond": 240,
+        "GracePeriod": "0.00:00:05"
+      },
+      "MinResponseDataRate": {
+        "BytesPerSecond": 240,
+        "GracePeriod": "0.00:00:05"
+      },
+      "Http2": {
+        "MaxStreamsPerConnection": 1000,
+        "MaxFrameSize": 16384,
+        "HeaderTableSize": 4096,
+        "MaxRequestHeaderFieldSize": 8192,
+        "InitialConnectionWindowSize": 131072,
+        "InitialStreamWindowSize": 98304
+      },
+      "Http3": {
+        "HeaderTableSize": 4096,
+        "MaxRequestHeaderFieldSize": 8192
+      }
+    },
+    "DisableStringReuse": true,
+    "AllowSynchronousIO": true,
+    "AddServerHeader": false,
+    "AllowResponseHeaderCompression": true,
+    "AllowAlternateSchemes": false,
+    "EnableAltSvc": false,
+    "EndPoints": {
+      "Http": {
+        "Url":
+        //#if (HttpPort > 0 && HttpPort < 65535)
+        "http://*:ELFHttpPort"
+        //#else
+        "http://*:8001"
+        //#endif
+      }
+      //#if (HttpsPort > 0 && HttpsPort < 65535)
+      ,
+      "Https": {
+        "Url": "https://*:ELFHttpsPort",
+        "SslProtocols": [ "Tls12", "Tls13" ]
+      }
+      //#endif
+    }
+  },
+  "FormOptions": {
+    "BufferBody": false,
+    "BufferBodyLengthLimit": 134217728,
+    "MemoryBufferThreshold": 65536,
+    "MultipartBodyLengthLimit": 134217728,
+    "MultipartBoundaryLengthLimit": 128,
+    "MultipartHeadersCountLimit": 128,
+    "MultipartHeadersLengthLimit": 16384,
+    "KeyLengthLimit": 2048,
+    "ValueLengthLimit": 4194304,
+    "ValueCountLimit": 1024
+  },
+  "HttpLogging": {
+    "LoggingFields": "All",
+    "RequestHeaders": [ ":method", "Cookie", "Origin", "Referer", "If-Modified-Since", "If-None-Match", "sec-ch-ua", "sec-ch-ua-mobile", "sec-ch-ua-platform", "sec-fetch-site", "sec-fetch-mode", "sec-fetch-user", "sec-fetch-dest", "Upgrade-Insecure-Requests" ],
+    "ResponseHeaders": [ "Company", "Author", "QQ", "Email", "Content-Encoding", "ETag", "Vary" ],
+    "MediaTypeOptions": [ "text/html", "application/json", "text/javascript", "text/xml" ],
+    "RequestBodyLogLimit": 10485760,
+    "ResponseBodyLogLimit": 10485760
+  },
+  "W3CLogging": {
+    "LoggingFields": "All",
+    "FileName": "FAYELF-W3C-",
+    "FileSizeLimit": 10485760,
+    "FlushInterval": "0.00:00:05",
+    "RetainedFileCountLimit": 1000,
+    "LogDirectory": "./logs"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  },
+  "Settings": {
+    "IsRuning": true,
+    "Init": true,
+    //#if (ELFEnableAdmin)
+    "EnableAdmin": true,
+    //#else
+    "EnableAdmin": false,
+    //#endif
+    "StartupAfterOpenHome": true,
+    "CloseDescription": "网站未授权...",
+    "AdminHome": "",
+    "VirtalFolder": "",
+    //#if (ELFEnableAdminAccount)
+    "EnableAdministrator": true,
+    //#else
+    "EnableAdministrator": false,
+    //#endif
+    "Administrator": "Account=ELFAdminAccount;Password=ELFAdminPassword;",
+    //#if (ELFAdminConnectionString == "")
+    "AdminDbProviderType": "SQLite",
+    //#else
+    "AdminDbProviderType": "ELFAdminDataProviderType",
+    //#endif
+    "AdminDbConnectionString": "ELFAdminDataConnectionString"
+  },
+  "Copyright": {
+    "Author": "Jacky",
+    "Company": "FAYELF",
+    "QQ": "7092734",
+    "Email": "jacky@eelf.cn",
+    "Phone": "15837199978",
+    "Site": "www.eelf.cn",
+    "Description": "Copyright © (2018 - ELFCopyrightYear) FAYELF All Rights Reserved.",
+    "Server": "FAYELF"
+  },
+  "Version": {
+    "Cms": "5.1",
+    "Admin": "5.1",
+    "Api": "5.1"
+  },
+  "ModelData": {
+    "Key": "ELF.Cube.Model",
+    "NameSpace": "ELF.Cube.Model",
+    "Path": "../ELF.Cube.Model/Model"
+  }
+}

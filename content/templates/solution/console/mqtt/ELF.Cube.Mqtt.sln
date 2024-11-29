@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("ELFSLNGUID") = "ELF.Cube.Mqtt", "src\ELF.Cube.Mqtt\ELF.Cube.Mqtt.csproj", "ELFMQTTGUID"
+EndProject
+
+#if (includemodel)
+Project("ELFSLNGUID") = "ELF.Cube.Mqtt.Model", "src\ELF.Cube.Mqtt.Model\ELF.Cube.Mqtt.Model.csproj", "ELFMODELGUID"
+EndProject
+#endif
+
+#if	(XiaoFengLocation != "")
+Project("ELFSLNGUID") = "XiaoFeng", "ELFXiaoFengLocation", "ELFXIAOFENGGUID"
+EndProject
+#endif
+
+#if	(XiaoFengMqttLocation != "")
+Project("ELFSLNGUID") = "XiaoFeng.Mqtt", "ELFXiaoFengMqttLocation", "ELFXIAOFENGMQTTGUID"
+EndProject
+#endif
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		ELFMQTTGUID.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		ELFMQTTGUID.Debug|Any CPU.Build.0 = Debug|Any CPU
+		ELFMQTTGUID.Release|Any CPU.ActiveCfg = Release|Any CPU
+		ELFMQTTGUID.Release|Any CPU.Build.0 = Release|Any CPU
+		#if (includemodel)
+		ELFMODELGUID.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		ELFMODELGUID.Debug|Any CPU.Build.0 = Debug|Any CPU
+		ELFMODELGUID.Release|Any CPU.ActiveCfg = Release|Any CPU
+		ELFMODELGUID.Release|Any CPU.Build.0 = Release|Any CPU
+		#endif
+		#if	(XiaoFengLocation != "")
+		ELFXIAOFENGGUID.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		ELFXIAOFENGGUID.Debug|Any CPU.Build.0 = Debug|Any CPU
+		ELFXIAOFENGGUID.Release|Any CPU.ActiveCfg = Release|Any CPU
+		ELFXIAOFENGGUID.Release|Any CPU.Build.0 = Release|Any CPU
+		#endif
+		#if	(XiaoFengMqttLocation != "")
+		ELFXIAOFENGMQTTGUID.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		ELFXIAOFENGMQTTGUID.Debug|Any CPU.Build.0 = Debug|Any CPU
+		ELFXIAOFENGMQTTGUID.Release|Any CPU.ActiveCfg = Release|Any CPU
+		ELFXIAOFENGMQTTGUID.Release|Any CPU.Build.0 = Release|Any CPU
+		#endif
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = ELFSLNMAINGUID
+	EndGlobalSection
+EndGlobal

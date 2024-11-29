@@ -1,0 +1,167 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "eelf.cn",
+  "classifications": [ "Library", "Windows", "Linux", "XiaoFeng", "ELF" ],
+  "identity": "XiaoFeng.Project.Library",
+  "name": "类库",
+  "shortName": "elf.project.library",
+  "description": "用于创建面向 .NET 或 .NET Standard 的类库项目，默认依赖于 XiaoFeng 类库。",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "ELF.Cube.Library",
+  "preferNameDirectory": true,
+  "defaultName": "ELF.Cube.Library",
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "项目框架",
+      "displayName": "项目框架",
+      "enableQuotelessLiterals": true,
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "netstandard2.0",
+          "description": ".NET Standard 2.0"
+        },
+        {
+          "choice": "netstandard2.1",
+          "description": ".NET Standard 2.1"
+        },
+        {
+          "choice": "net5.0",
+          "description": "net5.0"
+        },
+        {
+          "choice": "net6.0",
+          "description": "net6.0"
+        },
+        {
+          "choice": "net7.0",
+          "description": "net7.0"
+        },
+        {
+          "choice": "net8.0",
+          "description": "net8.0"
+        },
+        {
+          "choice": "net9.0",
+          "description": "net9.0"
+        }
+      ],
+      "replaces": "FrameworkParameter",
+      "defaultValue": "net9.0"
+    },
+    "XiaoFengVersion": {
+      "type": "parameter",
+      "description": "XiaoFeng 类库版本",
+      "displayName": "XiaoFeng 类库版本",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "5.2.7",
+          "displayName": "XiaoFeng 5.2.7",
+          "description": "XiaoFeng 5.2.7"
+        },
+        {
+          "choice": "5.2.5",
+          "displayName": "XiaoFeng 5.2.5",
+          "description": "XiaoFeng 5.2.5"
+        },
+        {
+          "choice": "5.2.3",
+          "displayName": "XiaoFeng 5.2.3",
+          "description": "XiaoFeng 5.2.3"
+        },
+        {
+          "choice": "5.2.2",
+          "displayName": "XiaoFeng 5.2.2",
+          "description": "XiaoFeng 5.2.2"
+        },
+        {
+          "choice": "5.2.1",
+          "displayName": "XiaoFeng 5.2.1",
+          "description": "XiaoFeng 5.2.1"
+        },
+        {
+          "choice": "5.2.0",
+          "displayName": "XiaoFeng 5.2.0",
+          "description": "XiaoFeng 5.2.0"
+        },
+        {
+          "choice": "5.1.0",
+          "displayName": "XiaoFeng 5.1.0",
+          "description": "XiaoFeng 5.1.0"
+        },
+        {
+          "choice": "5.0.5",
+          "displayName": "XiaoFeng 5.0.5",
+          "description": "XiaoFeng 5.0.5"
+        },
+        {
+          "choice": "5.0.4",
+          "displayName": "XiaoFeng 5.0.4",
+          "description": "XiaoFeng 5.0.4"
+        }
+      ],
+      "replaces": "ELFXiaoFengVersion",
+      "defaultValue": "5.2.7"
+    },
+    "XiaoFengLocation": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "XiaoFeng 本地类库项目路径，如：E:\\Work\\XiaoFeng\\XiaoFeng.csproj",
+      "displayName": "XiaoFeng 本地类库项目路径",
+      "replaces": "ELFXiaoFengLocation",
+      "defaultValue": ""
+    },
+    "DbProvider": {
+      "type": "parameter",
+      "description": "数据库驱动",
+      "displayName": "数据库驱动",
+      "enableQuotelessLiterals": true,
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "no",
+          "displayName": "无",
+          "description": "无"
+        },
+        {
+          "choice": "SQLite",
+          "displayName": "SQLite",
+          "description": "SQLite"
+        },
+        {
+          "choice": "SqlServer",
+          "displayName": "SqlServer",
+          "description": "SqlServer"
+        },
+        {
+          "choice": "MySql",
+          "displayName": "MySql",
+          "description": "MySql"
+        },
+        {
+          "choice": "Oracle",
+          "displayName": "Oracle",
+          "description": "Oracle"
+        },
+        {
+          "choice": "Dameng",
+          "displayName": "Dameng",
+          "description": "Dameng"
+        }
+      ],
+      "replaces": "ELFDbProvider",
+      "defaultValue": "no",
+      "allowMultipleValues": true
+    }
+  },
+  "primaryOutputs": [
+    {
+      "path": "ELF.Cube.Library.csproj"
+    }
+  ]
+}

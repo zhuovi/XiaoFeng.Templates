@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>FrameworkParameter</TargetFramework>
+		<VersionPrefix>1.0</VersionPrefix>
+		<VersionSuffix>0</VersionSuffix>
+		<Nullable>enable</Nullable>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<XiaoFeng></XiaoFeng>
+	</PropertyGroup>
+	<Import Project="XiaoFeng.targets" Version="1.0.2" />
+</Project>

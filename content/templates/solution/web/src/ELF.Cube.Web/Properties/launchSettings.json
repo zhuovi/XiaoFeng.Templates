@@ -1,0 +1,55 @@
+{
+  "profiles": {
+    "ELF.Cube.Web": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:50161;http://localhost:50163"
+    },
+    //#if (SupportDocker)
+    //#if (DockerType == "Dockerfile")
+    "ELF.Cube.Web(Dockerfile)": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "ASPNETCORE_HTTPS_PORTS": "ELFHttpsPort",
+        "ASPNETCORE_HTTP_PORTS": "ELFHttpPort"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
+    },
+    //#elseif(DockerType == ".NET SDK")
+    "ELF.Cube.Web(.NET SDK)": {
+      "commandName": "SdkContainer",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "ASPNETCORE_HTTPS_PORTS": "ELFHttpsPort",
+        "ASPNETCORE_HTTP_PORTS": "ELFHttpPort"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
+    },
+    //#endif
+    //#endif
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:ELFHttpPort",
+      "sslPort": ELFHttpsPort
+    }
+  }
+}

@@ -1,0 +1,73 @@
+<Project ToolsVersion="1.0" xmlurl="http://nuget.fayelf.com/XiaoFeng.targets">
+	<PropertyGroup Condition="$(Configuration)=='Debug'">
+		<XiaoFengMvc>debug</XiaoFengMvc>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(XiaoFengMvc)' == 'Debug'">
+		<RazorCompileOnBuild>false</RazorCompileOnBuild>
+		<RazorCompileOnPublish>false</RazorCompileOnPublish>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(XiaoFengMvc)' != 'Debug'">
+		<RazorCompileOnBuild>true</RazorCompileOnBuild>
+		<RazorCompileOnPublish>true</RazorCompileOnPublish>
+	</PropertyGroup>
+	<PropertyGroup>
+		<DefineConstants>XiaoFengMvc;</DefineConstants>
+	</PropertyGroup>
+	<Import Project="XiaoFeng.targets" Version="1.0.2" />
+	<!--全局引用-->
+	<ItemGroup
+		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR　'$(TargetFramework)'=='net8.0' OR　'$(TargetFramework)'=='net9.0'">
+		<Using
+			Include="XiaoFeng.Mvc;XiaoFeng.Json;XiaoFeng.Xml;Microsoft.AspNetCore.Builder;Microsoft.Extensions.DependencyInjection;" />
+	</ItemGroup>
+	<!--输出目录配置-->
+	<ItemGroup Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'">
+		<Content Include="AppData\**\*" CopyToOutputDirectory="PreserveNewest" />
+		<Content Include="Html\**\*" CopyToOutputDirectory="PreserveNewest" />
+		<Content Include="Config\Admin\*" CopyToOutputDirectory="PreserveNewest" />
+		<Content Include="UploadFiles\**\*" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+	<!--数据库引用-->
+	<ItemGroup>
+		<!--#if (DbProvider == SQLite || ELFAdminProviderType == SQLite) -->
+		<PackageReference Include="Stub.System.Data.SQLite.Core.NetStandard" Version="1.0.119" />
+		<!--#endif-->
+		<!--#if	(DbProvider == MySql || ELFAdminProviderType == MySql) -->
+		<PackageReference Include="MySql.Data" Version="9.1.0" />
+		<!--#endif-->
+		<!--#if (DbProvider	== Oracle || ELFAdminProviderType == Oracle) -->
+		<PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.6.1" />
+		<!--#endif-->
+		<!--#if	(DbProvider	== SqlServer || ELFAdminProviderType == SqlServer) -->
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+		<!--#endif-->
+		<!--#if	(DbProvider	== Dameng || ELFAdminProviderType == Dameng) -->
+		<PackageReference Include="DM.DmProvider" Version="8.3.1.30495" />
+		<!--#endif-->
+	</ItemGroup>
+	<!--XiaoFeng.Mvc项目引用-->
+	<ItemGroup>
+		<!--#if	(XiaoFengMvcLocation != "") -->
+		<ProjectReference Include="ELFXiaoFengMvcLocation" Condition="$(XiaoFengMvc) == 'Debug'" />
+		<PackageReference Include="XiaoFeng.Mvc" Version="ELFXiaoFengMvcVersion" Condition="$(XiaoFengMvc) != 'Debug'" />
+		<!--#else-->
+		<PackageReference Include="XiaoFeng.Mvc" Version="ELFXiaoFengMvcVersion" />
+		<!--#endif-->
+	</ItemGroup>
+
+	<!--调试时启用运行时编译视图引用-->
+	<ItemGroup Condition="'$(Configuration)|$(RazorCompileOnBuild)'=='Debug|False' ">
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+			Version="3.1.27" Condition="'$(TargetFramework)' == 'netcoreapp3.1' " />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+			Version="5.0.17" Condition="'$(TargetFramework)' == 'net5.0'" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+			Version="6.0.32" Condition="'$(TargetFramework)' == 'net6.0'" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+			Version="7.0.20" Condition="'$(TargetFramework)' == 'net7.0'" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+			Version="8.0.7" Condition="'$(TargetFramework)' == 'net8.0'" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+			Version="9.0.0" Condition="'$(TargetFramework)' == 'net9.0'" />
+	</ItemGroup>
+</Project>

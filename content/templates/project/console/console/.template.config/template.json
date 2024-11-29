@@ -1,0 +1,227 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "eelf.cn",
+  "classifications": [ "Console","项目", "Windows", "Linux", "XiaoFeng","ELF" ],
+  "identity": "XiaoFeng.Project.Console",
+  "name": "控制台应用 - 项目",
+  "shortName": "elf.project.console",
+  "description": "用于创建可在 Windows、Linux 和 macOS 上运行的命令行应用程序的项目，默认依赖于 XiaoFeng 类库。",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "ELF.Cube.Console",
+  "preferNameDirectory": true,
+  "defaultName": "ELF.Cube.Console",
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "项目框架",
+      "displayName": "项目框架",
+      "enableQuotelessLiterals": true,
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net5.0",
+          "description": "net5.0"
+        },
+        {
+          "choice": "net6.0",
+          "description": "net6.0"
+        },
+        {
+          "choice": "net7.0",
+          "description": "net7.0"
+        },
+        {
+          "choice": "net8.0",
+          "description": "net8.0"
+        },
+        {
+          "choice": "net9.0",
+          "description": "net9.0"
+        }
+      ],
+      "replaces": "FrameworkParameter",
+      "defaultValue": "net9.0"
+    },
+    "SupportDocker": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "启用容器支持",
+      "displayName": "启用容器支持",
+      "defaultValue": "false",
+      "enableQuotelessLiterals": true
+    },
+    "DockerOS": {
+      "type": "parameter",
+      "description": "容器 OS",
+      "displayName": "容器 OS",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "Windows",
+          "description": "Windows",
+          "displayName": "Windows"
+        },
+        {
+          "choice": "Linux",
+          "description": "Linux",
+          "displayName": "Linux"
+        }
+      ],
+      "defaultValue": "Linux",
+      "replaces": "DockerOSParameter",
+      "isEnabled": "(SupportDocker == true)"
+    },
+    "DockerType": {
+      "type": "parameter",
+      "datatype": "choice",
+      "description": "容器生成类型",
+      "displayName": "容器生成类型",
+      "choices": [
+        {
+          "choice": "Dockerfile",
+          "description": "Dockerfile",
+          "displayName": "Dockerfile"
+        }
+      ],
+      "isEnabled": "(SupportDocker == true)"
+    },
+    "NativeAOT": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "启用 native AOT 发布",
+      "displayName": "启用 native AOT 发布",
+      "defaultValue": "false",
+      "isEnabled": "(Framework == \"net8.0\" || Framework == \"9.0\")"
+    },
+    "XiaoFengVersion": {
+      "type": "parameter",
+      "description": "XiaoFeng 类库版本",
+      "displayName": "XiaoFeng 类库版本",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "5.2.7",
+          "displayName": "XiaoFeng 5.2.7",
+          "description": "XiaoFeng 5.2.7"
+        },
+        {
+          "choice": "5.2.5",
+          "displayName": "XiaoFeng 5.2.5",
+          "description": "XiaoFeng 5.2.5"
+        },
+        {
+          "choice": "5.2.3",
+          "displayName": "XiaoFeng 5.2.3",
+          "description": "XiaoFeng 5.2.3"
+        },
+        {
+          "choice": "5.2.2",
+          "displayName": "XiaoFeng 5.2.2",
+          "description": "XiaoFeng 5.2.2"
+        },
+        {
+          "choice": "5.2.1",
+          "displayName": "XiaoFeng 5.2.1",
+          "description": "XiaoFeng 5.2.1"
+        },
+        {
+          "choice": "5.2.0",
+          "displayName": "XiaoFeng 5.2.0",
+          "description": "XiaoFeng 5.2.0"
+        },
+        {
+          "choice": "5.1.0",
+          "displayName": "XiaoFeng 5.1.0",
+          "description": "XiaoFeng 5.1.0"
+        },
+        {
+          "choice": "5.0.5",
+          "displayName": "XiaoFeng 5.0.5",
+          "description": "XiaoFeng 5.0.5"
+        },
+        {
+          "choice": "5.0.4",
+          "displayName": "XiaoFeng 5.0.4",
+          "description": "XiaoFeng 5.0.4"
+        }
+      ],
+      "replaces": "ELFXiaoFengVersion",
+      "defaultValue": "5.2.7"
+    },
+    "XiaoFengLocation": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "XiaoFeng 本地类库项目路径，如：E:\\Work\\XiaoFeng\\XiaoFeng.csproj",
+      "displayName": "XiaoFeng 本地类库项目路径",
+      "replaces": "ELFXiaoFengLocation",
+      "defaultValue": ""
+    },
+    "DbProvider": {
+      "type": "parameter",
+      "description": "数据库驱动",
+      "displayName": "数据库驱动",
+      "enableQuotelessLiterals": true,
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "no",
+          "displayName": "无",
+          "description": "无"
+        },
+        {
+          "choice": "SQLite",
+          "displayName": "SQLite",
+          "description": "SQLite"
+        },
+        {
+          "choice": "SqlServer",
+          "displayName": "SqlServer",
+          "description": "SqlServer"
+        },
+        {
+          "choice": "MySql",
+          "displayName": "MySql",
+          "description": "MySql"
+        },
+        {
+          "choice": "Oracle",
+          "displayName": "Oracle",
+          "description": "Oracle"
+        },
+        {
+          "choice": "Dameng",
+          "displayName": "Dameng",
+          "description": "Dameng"
+        }
+      ],
+      "replaces": "ELFDbProvider",
+      "defaultValue": "no",
+      "allowMultipleValues": true
+    },
+    "UserSecertId": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "ELFUserSecretsId"
+    }
+  },
+  "primaryOutputs": [
+    {
+      "path": "ELF.Cube.Console.csproj"
+    }
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!SupportDocker)",
+          "exclude": [
+            "Dockerfile"
+          ]
+        }
+      ]
+    }
+  ]
+}

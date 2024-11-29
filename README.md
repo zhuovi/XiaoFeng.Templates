@@ -36,7 +36,7 @@ XiaoFeng generator with [XiaoFeng](https://github.com/zhuovi/XiaoFeng).
 .NET CLI
 
 ```shell
-> dotnet new install XiaoFeng.Templates::1.0.6
+> dotnet new install XiaoFeng.Templates::1.1.0
 ```
 
 # XiaoFeng 类库包含库
@@ -88,6 +88,10 @@ E:\Work\XiaoFeng.Templates> dotnet pack
 ```shell
 > dotnet new install XiaoFeng.Templates
 ```
+### 安装指定版本
+```shell
+> dotnet new install XiaoFeng.Templates::1.1.0
+```
 
 ### 更新
 
@@ -112,6 +116,22 @@ E:\Work\XiaoFeng.Templates> dotnet pack
 
 
 ## 升级日志
+
+## 2024-11-28	v 1.1.0
+
+1.增加创建web项目时创建实体模型类;
+
+## 2024-11-26	v 1.0.8
+
+1.移除 XiaoFeng v 5.2.6 及 XiaoFeng.Mvc v 5.1.8
+
+## 2024-11-26	v 1.0.7
+
+1.增加开发环境及运行环境下默认启动页功能
+
+2.增加 .net9.0 支持
+
+3.增加 XiaoFeng,XiaoFeng.Mvc最新版本引用
 
 ## 2024-11-10	v 1.0.6
 

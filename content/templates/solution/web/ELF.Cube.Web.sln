@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("ELFSLNGUID") = "ELF.Cube.Web", "src\ELF.Cube.Web\ELF.Cube.Web.csproj", "ELFWEBGUID"
+EndProject
+
+#if (includemodel)
+Project("ELFSLNGUID") = "ELF.Cube.Web.Model", "src\ELF.Cube.Web.Model\ELF.Cube.Web.Model.csproj", "ELFMODELGUID"
+EndProject
+#endif
+
+#if	(XiaoFengLocation != "")
+Project("ELFSLNGUID") = "XiaoFeng", "ELFXiaoFengLocation", "ELFXIAOFENGGUID"
+EndProject
+#endif
+
+#if	(XiaoFengMvcLocation != "")
+Project("ELFSLNGUID") = "XiaoFeng.Mvc", "ELFXiaoFengMvcLocation", "ELFXIAOFENGMVCGUID"
+EndProject
+#endif
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		ELFWEBGUID.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		ELFWEBGUID.Debug|Any CPU.Build.0 = Debug|Any CPU
+		ELFWEBGUID.Release|Any CPU.ActiveCfg = Release|Any CPU
+		ELFWEBGUID.Release|Any CPU.Build.0 = Release|Any CPU
+		#if	(XiaoFengLocation != "")
+		ELFXIAOFENGGUID.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		ELFXIAOFENGGUID.Debug|Any CPU.Build.0 = Debug|Any CPU
+		ELFXIAOFENGGUID.Release|Any CPU.ActiveCfg = Release|Any CPU
+		ELFXIAOFENGGUID.Release|Any CPU.Build.0 = Release|Any CPU
+		#endif
+		#if	(XiaoFengMvcLocation != "")
+		ELFXIAOFENGMVCGUID.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		ELFXIAOFENGMVCGUID.Debug|Any CPU.Build.0 = Debug|Any CPU
+		ELFXIAOFENGMVCGUID.Release|Any CPU.ActiveCfg = Release|Any CPU
+		ELFXIAOFENGMVCGUID.Release|Any CPU.Build.0 = Release|Any CPU
+		#endif
+		#if (includemodel)
+		ELFMODELGUID.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		ELFMODELGUID.Debug|Any CPU.Build.0 = Debug|Any CPU
+		ELFMODELGUID.Release|Any CPU.ActiveCfg = Release|Any CPU
+		ELFMODELGUID.Release|Any CPU.Build.0 = Release|Any CPU
+		#endif
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = ELFSLNMAINGUID
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    //#if (SupportDocker)
+    "ELF.Cube.Mqtt(Dockerfile)": {
+      "commandName": "Docker"
+    },
+    //#endif
+    "ELF.Cube.Mqtt": {
+      "commandName": "Project"
+    }
+  }
+}

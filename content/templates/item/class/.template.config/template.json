@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "eelf.cn",
+  "classifications": [ "Common", "Code", "Class", "XiaoFeng", "ELF" ],
+  "identity": "XiaoFeng.Item.Class",
+  "name": "类 ELF",
+  "shortName": "elf.class",
+  "description": "类文件，带有 ELF 注释的类文件",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "ElfClass",
+  "preferNameDirectory": true,
+  "defaultName": "ElfClass",
+  "symbols": {
+    "ClassName": {
+      "type": "parameter",
+      "description": "请输入分类文件名称",
+      "datatype": "text",
+      "replaces": "ElfClass",
+      "fileRename": "ElfClass",
+      "defaultValue": "ElfClass"
+    }
+  }
+}
