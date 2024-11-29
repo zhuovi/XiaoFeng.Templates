@@ -251,12 +251,12 @@
       "displayName": "创建实体模型库",
       "description": "创建实体模型库",
       "datatype": "bool",
-      "defaultValue": "true"
+      "defaultValue": "false"
     }
   },
   "primaryOutputs": [
     {
-      "path": "ELF.Cube.Socket.csproj"
+      "path": "src/ELF/Cube.Socket/ELF.Cube.Socket.csproj"
     }
   ],
   "sources": [
@@ -265,7 +265,13 @@
         {
           "condition": "(!SupportDocker)",
           "exclude": [
-            "Dockerfile"
+            "src/ELF.Cube.Socket/Dockerfile"
+          ]
+        },
+        {
+          "condition": "(!includemodel)",
+          "exclude": [
+            "src/ELF.Cube.Socket.Model/**/*"
           ]
         }
       ]

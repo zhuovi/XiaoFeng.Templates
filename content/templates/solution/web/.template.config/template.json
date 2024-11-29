@@ -416,14 +416,19 @@
       "displayName": "创建实体模型库",
       "description": "创建实体模型库",
       "datatype": "bool",
-      "defaultValue": "true"
+      "defaultValue": "false"
     }
   },
+  "primaryOutputs": [
+    {
+      "path": "src/ELF.Cube.Web/ELF.Cube.Web.csproj"
+    }
+  ],
   "sources": [
     {
       "modifiers": [
         {
-          "condition": "(!SupportDocker || (SupportDocker && DockerType ==\".NET SDK\"))",
+          "condition": "(!SupportDocker || (SupportDocker && DockerType == \".NET SDK\"))",
           "exclude": [
             "src/ELF.Cube.Web/Dockerfile"
           ]

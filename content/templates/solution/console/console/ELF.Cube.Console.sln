@@ -7,7 +7,7 @@ Project("ELFSLNGUID") = "ELF.Cube.Console", "src\ELF.Cube.Console\ELF.Cube.Conso
 EndProject
 
 #if (includemodel)
-Project("ELFSLNGUID") = "ELF.Cube.Console.Model", "src\ELF.Cube.Web.Model\ELF.Cube.Console.Model.csproj", "ELFMODELGUID"
+Project("ELFSLNGUID") = "ELF.Cube.Console.Model", "src\ELF.Cube.Console.Model\ELF.Cube.Console.Model.csproj", "ELFMODELGUID"
 EndProject
 #endif
 
