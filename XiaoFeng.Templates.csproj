@@ -26,7 +26,7 @@
 		<NoDefaultExcludes>true</NoDefaultExcludes>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageReleaseNotes>增加创建web项目时创建实体模型类;</PackageReleaseNotes>
+		<PackageReleaseNotes>增加创建web项目时创建实体模型类;优化细节问题;</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<PropertyGroup>

@@ -417,6 +417,16 @@
       "description": "创建实体模型库",
       "datatype": "bool",
       "defaultValue": "false"
+    },
+    "modelnamespace": {
+      "type": "parameter",
+      "displayName": "实体模型库项目名称",
+      "description": "实体模型库项目名称",
+      "datatype": "text",
+      "defaultValue": "ELF.Cube.Web.Model",
+      "isEnabled": "(includemodel)",
+      "replaces": "ELF.Cube.Model",
+      "isRequired": true
     }
   },
   "primaryOutputs": [

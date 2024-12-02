@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 *  Version : v 1.0.0                                            *
 *  CLR Version : 4.0.30319.42000                                *
 *****************************************************************/
-namespace ELF.Cube.Web.Model
+namespace ELF.Cube.Model
 {
     /// <summary>
     /// Class1 类说明
