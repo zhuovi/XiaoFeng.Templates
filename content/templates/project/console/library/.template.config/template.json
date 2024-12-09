@@ -60,6 +60,11 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "5.2.8",
+          "displayName": "XiaoFeng 5.2.8",
+          "description": "XiaoFeng 5.2.8"
+        },
+        {
           "choice": "5.2.7",
           "displayName": "XiaoFeng 5.2.7",
           "description": "XiaoFeng 5.2.7"
@@ -106,7 +111,7 @@
         }
       ],
       "replaces": "ELFXiaoFengVersion",
-      "defaultValue": "5.2.7"
+      "defaultValue": "5.2.8"
     },
     "XiaoFengLocation": {
       "type": "parameter",
