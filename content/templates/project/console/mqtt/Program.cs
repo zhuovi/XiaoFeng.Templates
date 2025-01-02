@@ -4,17 +4,18 @@
 
 //服务端代码
 var server = Helper.GetMqttServer(1006);
+server.AddCredential("eelf", "eelf.cn");
 server.Start();
 
 
 //客户端代码
-//var client = Helper.GetMqttClient("ws://127.0.0.1:1006");
+//var client = Helper.GetMqttClient("mqtt://eelf:eelf.cn@127.0.0.1:1006");
 //await client.ConnectAsync().ConfigureAwait(false);
 
 /*
 //向频道 aa/bb 发送消息 aaaaaa
 var aaa = await client.PublishAsync("aa/bb", "aaaaaa").ConfigureAwait(false);
-Helper.w($"send msg:{aaa}");
+Helper.wt($"send msg:{aaa}");
 
 //订阅
 await client.SubscributeAsync("$data").ConfigureAwait(false);
@@ -40,7 +41,7 @@ do
     if (line.ToUpper() == "EXIT")
         break;
 
-    Helper.w($"用户输入的数据为:{line}");
+    Helper.wt($"用户输入的数据为:{line}");
     //接到用户从控制台输入的数据进行操作
 
 

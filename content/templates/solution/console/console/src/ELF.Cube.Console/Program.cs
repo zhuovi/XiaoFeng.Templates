@@ -2,7 +2,7 @@
 using XiaoFeng;
 //开始写代码
 //在这里写你的业务代码
-Console.WriteLine("Hello, World!");
+w("Hello, World!");
 
 //下边是处理用户在控制台输入数据时的处理
 
@@ -15,18 +15,33 @@ do
     if (line.ToUpper() == "EXIT")
         break;
 
-    w($"用户输入的数据为:{line}");
+    wt($"用户输入的数据为:{line}");
     //接到用户从控制台输入的数据进行操作
 
 
 } while (true);
 
-//输出控制台
-static void w(object msg)
+/// <summary>
+/// 输出控制台
+/// </summary>
+/// <param name="msg">消息</param>
+/// <param name="isTime">是否显示时间</param>
+static void w(object msg, bool isTime = false)
 {
     var message = "";
     var valType = msg.GetType().GetValueType();
     if (valType == ValueTypes.Value || valType == ValueTypes.String || valType == ValueTypes.Enum) message = msg.ToString();
     else message = msg.ToJson();
-    Console.WriteLine($"{message} - {DateTime.Now:yyyy-MM-dd HH:mm:ss.fffffff}");
+    Console.Write($"{message}");
+    if (isTime)
+        Console.Write($" - {DateTime.Now:yyyy-MM-dd HH:mm:ss.fffffff}");
+    Console.WriteLine();
+}
+/// <summary>
+/// 输出控制台
+/// </summary>
+/// <param name="msg">消息</param>
+static void wt(object msg)
+{
+    w(msg, true);
 }

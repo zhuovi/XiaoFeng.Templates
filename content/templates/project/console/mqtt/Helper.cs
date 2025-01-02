@@ -28,7 +28,7 @@ namespace ELF.Cube.Mqtt
         public static IMqttServer GetMqttServer(int port)
         {
             var server = new MqttServer(port);
-            server.AddCredential("testa", "testa123");
+
             server.OnStarted += o =>
             {
                 w("ELF (MQTT) server version 1.0.0 starting.");
@@ -117,32 +117,30 @@ namespace ELF.Cube.Mqtt
                 }
             };
             return client;
-            //await client.ConnectAsync().ConfigureAwait(false);
-            //while (true)
-            //{
-            //    var aaa = await client.PublishAsync("aa/bb", "aaaaa").ConfigureAwait(false);
-            //    w($"send msg:{aaa}");
-            //    await Task.Delay(6 * 1000).ConfigureAwait(false);
-            //}
-            //await client.SubscributeAsync("$data").ConfigureAwait(false);
-            //await client.PingAsync().ConfigureAwait(false);
-            //await client.PublishAsync("a/b","aaaa").ConfigureAwait(false);
-
-
-            //await client.UnsubscributeAsync("a/b").ConfigureAwait(false);
-
         }
         /// <summary>
         /// 输出控制台
         /// </summary>
         /// <param name="msg">消息</param>
-        public static void w(object msg)
+        /// <param name="isTime">是否显示时间</param>
+        public static void w(object msg, bool isTime = false)
         {
             var message = "";
             var valType = msg.GetType().GetValueType();
             if (valType == ValueTypes.Value || valType == ValueTypes.String || valType == ValueTypes.Enum) message = msg.ToString();
             else message = msg.ToJson();
-            Console.WriteLine($"{message} - {DateTime.Now:yyyy-MM-dd HH:mm:ss.fffffff}");
+            Console.Write($"{message}");
+            if (isTime)
+                Console.Write($" - {DateTime.Now:yyyy-MM-dd HH:mm:ss.fffffff}");
+            Console.WriteLine();
+        }
+        /// <summary>
+        /// 输出控制台
+        /// </summary>
+        /// <param name="msg">消息</param>
+        public static void wt(object msg)
+        {
+            w(msg, true);
         }
     }
 }

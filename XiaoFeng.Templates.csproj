@@ -3,7 +3,7 @@
 		<!-- The package metadata. Fill in the properties marked as TODO below -->
 		<!-- Follow the instructions on https://learn.microsoft.com/en-us/nuget/create-packages/package-authoring-best-practices -->
 		<PackageId>XiaoFeng.Templates</PackageId>
-		<PackageVersion>1.1.0</PackageVersion>
+		<PackageVersion>1.1.1</PackageVersion>
 		<Title>XiaoFeng.Mvc 低代码开发框架，Web 项目模板、Socket 项目模板、Mqtt 项目模板。</Title>
 		<Product>XiaoFeng.Mvc 低代码开发框架，Web 项目模板、Socket 项目模板、Mqtt 项目模板。</Product>
 		<Authors>Jacky</Authors>
@@ -26,7 +26,7 @@
 		<NoDefaultExcludes>true</NoDefaultExcludes>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageReleaseNotes>增加创建web项目时创建实体模型类;优化细节问题;</PackageReleaseNotes>
+		<PackageReleaseNotes>优化创建项目代码;</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<PropertyGroup>

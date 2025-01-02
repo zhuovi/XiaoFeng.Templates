@@ -49,12 +49,12 @@ namespace ELF.Cube.Socket
             server.OnStart += (s, e) =>
             {
                 //服务端启动事件
-                w($"服务端已启动!");
+                wt($"服务端已启动!");
             };
             server.OnNewConnection += (s, e) =>
             {
                 //客户端新连接事件
-                w($"新连接:{s.EndPoint}");
+                wt($"新连接:{s.EndPoint}");
                 //给当前客户端设置一个频道名  为后边按频道名发送作准备
                 //一个客户端可以订阅多个频道
                 //websocket可以从头里面获取标识
@@ -67,7 +67,7 @@ namespace ELF.Cube.Socket
             server.OnDisconnected += (s, e) =>
             {
                 //客户端断开连接事件
-                w($"断开连接:{s.EndPoint}!");
+                wt($"断开连接:{s.EndPoint}!");
             };
             server.OnMessage += (s, m, e) =>
             {
@@ -82,7 +82,7 @@ namespace ELF.Cube.Socket
                     s.AddChannel("b");
                     return;
                 }
-                w($"消息:{s.EndPoint}-{m}");
+                wt($"消息:{s.EndPoint}-{m}");
                 //把当前消息发送到频道名为a的所有客户端
                 server.Send(Encoding.UTF8.GetBytes("消息"));
                 //回复当前客户端消息
@@ -98,7 +98,7 @@ namespace ELF.Cube.Socket
             server.OnError += (s, e) =>
             {
                 //服务端出错事件
-                w($"出错:{e.Message}");
+                wt($"出错:{e.Message}");
             };
             server.OnClientError += (c, m, e) =>
             {
@@ -111,7 +111,7 @@ namespace ELF.Cube.Socket
             server.OnStop += (socket, e) =>
             {
                 //服务端停止事件
-                w("服务端已停止");
+                wt("服务端已停止");
             };
             //server.Start();
             //添加黑名单
@@ -146,12 +146,12 @@ namespace ELF.Cube.Socket
             client.OnClientError += (c, m, e) =>
             {
                 //出错代码;
-                w(m);
+                wt(m);
             };
             client.OnMessage += (c, m, e) =>
             {
                 //接收消息代码，当前数据为 字符串
-                w(m);
+                wt(m);
             };
             client.OnMessageByte += (c, m, e) =>
             {
@@ -160,12 +160,12 @@ namespace ELF.Cube.Socket
             client.OnStart += (c, e) =>
             {
                 //启动后事件
-                w("客户端已启动");
+                wt("客户端已启动");
             };
             client.OnStop += (c, e) =>
             {
                 //停止后代码
-                w("客户端已停止");
+                wt("客户端已停止");
             };
             //启动客户端
             //client.Start();
@@ -178,13 +178,25 @@ namespace ELF.Cube.Socket
         /// 输出控制台
         /// </summary>
         /// <param name="msg">消息</param>
-        public static void w(object msg)
+        /// <param name="isTime">是否显示时间</param>
+        public static void w(object msg, bool isTime = false)
         {
             var message = "";
             var valType = msg.GetType().GetValueType();
             if (valType == ValueTypes.Value || valType == ValueTypes.String || valType == ValueTypes.Enum) message = msg.ToString();
             else message = msg.ToJson();
-            Console.WriteLine($"{message} - {DateTime.Now:yyyy-MM-dd HH:mm:ss.fffffff}");
+            Console.Write($"{message}");
+            if (isTime)
+                Console.Write($" - {DateTime.Now:yyyy-MM-dd HH:mm:ss.fffffff}");
+            Console.WriteLine();
+        }
+        /// <summary>
+        /// 输出控制台
+        /// </summary>
+        /// <param name="msg">消息</param>
+        public static void wt(object msg)
+        {
+            w(msg, true);
         }
     }
 }

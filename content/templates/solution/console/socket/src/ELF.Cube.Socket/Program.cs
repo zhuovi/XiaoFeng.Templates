@@ -24,7 +24,7 @@ do
     if (line.ToUpper() == "EXIT")
         break;
 
-    Helper.w($"用户输入的数据为:{line}");
+    Helper.wt($"用户输入的数据为:{line}");
     //接到用户从控制台输入的数据进行操作
 
 
