@@ -4,7 +4,7 @@
 		<Authors>Jacky</Authors>
 		<Company>易精灵</Company>
 		<Copyright>
-			copyright © (2008-2026) FAYELF All Rights Reserved. 易精灵(www.eelf.cn) QQ:7092734 Email:jacky@eelf.cn</Copyright>
+			copyright © (2008-ELFCopyrightYear) FAYELF All Rights Reserved. 易精灵(www.eelf.cn) QQ:7092734 Email:jacky@eelf.cn</Copyright>
 		<PackageTags>FAYELF;XiaoFeng;</PackageTags>
 		<Version>$(VersionPrefix).$(VersionSuffix)</Version>
 		<FileVersion>$(Version)</FileVersion>

@@ -212,16 +212,6 @@
           "choice": "5.1.0",
           "displayName": "XiaoFeng 5.1.0",
           "description": "XiaoFeng 5.1.0"
-        },
-        {
-          "choice": "5.0.5",
-          "displayName": "XiaoFeng 5.0.5",
-          "description": "XiaoFeng 5.0.5"
-        },
-        {
-          "choice": "5.0.4",
-          "displayName": "XiaoFeng 5.0.4",
-          "description": "XiaoFeng 5.0.4"
         }
       ],
       "replaces": "ELFXiaoFengVersion",
