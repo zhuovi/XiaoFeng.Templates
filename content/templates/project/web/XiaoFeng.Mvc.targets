@@ -17,8 +17,7 @@
 	<!--全局引用-->
 	<ItemGroup
 		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR　'$(TargetFramework)'=='net8.0' OR　'$(TargetFramework)'=='net9.0'">
-		<Using
-			Include="XiaoFeng.Mvc;XiaoFeng.Json;XiaoFeng.Xml;Microsoft.AspNetCore.Builder;Microsoft.Extensions.DependencyInjection;" />
+		<Using Include="XiaoFeng.Mvc;XiaoFeng.Json;XiaoFeng.Xml;Microsoft.AspNetCore.Builder;Microsoft.Extensions.DependencyInjection;" />
 	</ItemGroup>
 	<!--输出目录配置-->
 	<ItemGroup Condition="'$(Configuration)|$(OutputType)'=='Release|Exe'">

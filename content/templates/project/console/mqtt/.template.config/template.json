@@ -103,6 +103,11 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "5.2.10",
+          "displayName": "XiaoFeng 5.2.10",
+          "description": "XiaoFeng 5.2.10"
+        },
+        {
           "choice": "5.2.9",
           "displayName": "XiaoFeng 5.2.9",
           "description": "XiaoFeng 5.2.9"
@@ -146,20 +151,10 @@
           "choice": "5.1.0",
           "displayName": "XiaoFeng 5.1.0",
           "description": "XiaoFeng 5.1.0"
-        },
-        {
-          "choice": "5.0.5",
-          "displayName": "XiaoFeng 5.0.5",
-          "description": "XiaoFeng 5.0.5"
-        },
-        {
-          "choice": "5.0.4",
-          "displayName": "XiaoFeng 5.0.4",
-          "description": "XiaoFeng 5.0.4"
         }
       ],
       "replaces": "ELFXiaoFengVersion",
-      "defaultValue": "5.2.9"
+      "defaultValue": "5.2.10"
     },
     "XiaoFengLocation": {
       "type": "parameter",
@@ -175,6 +170,11 @@
       "displayName": "XiaoFeng.Mqtt 类库版本",
       "datatype": "choice",
       "choices": [
+        {
+          "choice": "1.0.5",
+          "displayName": "XiaoFeng.Mqtt 1.0.5",
+          "description": "XiaoFeng.Mqtt 1.0.5"
+        },
         {
           "choice": "1.0.3",
           "displayName": "XiaoFeng.Mqtt 1.0.3",
@@ -197,7 +197,7 @@
         }
       ],
       "replaces": "ELFXiaoFengMqttVersion",
-      "defaultValue": "1.0.3"
+      "defaultValue": "1.0.5"
     },
     "XiaoFengMqttLocation": {
       "type": "parameter",
@@ -253,6 +253,14 @@
       "type": "generated",
       "generator": "guid",
       "replaces": "ELFUserSecretsId"
+    },
+    "CopyrightYear": {
+      "type": "generated",
+      "generator": "now",
+      "parameters": {
+        "format": "yyyy"
+      },
+      "replaces": "ELFCopyrightYear"
     }
   },
   "primaryOutputs": [

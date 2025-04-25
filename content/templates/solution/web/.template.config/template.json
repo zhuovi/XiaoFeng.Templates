@@ -96,6 +96,11 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "5.2.2",
+          "displayName": "XiaoFeng.Mvc 5.2.2",
+          "description": "XiaoFeng.Mvc 5.2.2"
+        },
+        {
           "choice": "5.2.1",
           "displayName": "XiaoFeng.Mvc 5.2.1",
           "description": "XiaoFeng.Mvc 5.2.1"
@@ -142,7 +147,7 @@
         }
       ],
       "replaces": "ELFXiaoFengMvcVersion",
-      "defaultValue": "5.2.1"
+      "defaultValue": "5.2.2"
     },
     "XiaoFengMvcLocation": {
       "type": "parameter",
@@ -158,6 +163,11 @@
       "displayName": "XiaoFeng 类库版本",
       "datatype": "choice",
       "choices": [
+        {
+          "choice": "5.2.10",
+          "displayName": "XiaoFeng 5.2.10",
+          "description": "XiaoFeng 5.2.10"
+        },
         {
           "choice": "5.2.9",
           "displayName": "XiaoFeng 5.2.9",
@@ -215,7 +225,7 @@
         }
       ],
       "replaces": "ELFXiaoFengVersion",
-      "defaultValue": "5.2.9"
+      "defaultValue": "5.2.10"
     },
     "XiaoFengLocation": {
       "type": "parameter",

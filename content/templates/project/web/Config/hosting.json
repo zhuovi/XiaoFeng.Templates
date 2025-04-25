@@ -103,6 +103,7 @@
     "CloseDescription": "网站未授权...",
     "AdminHome": "",
     "VirtalFolder": "",
+    "AdminMenuDblClickEvent": true,
     //#if (ELFEnableAdminAccount)
     "EnableAdministrator": true,
     //#else

@@ -10,13 +10,8 @@
 	</PropertyGroup>
 	<Import Project="XiaoFeng.targets" Version="1.0.2" />
 	<!--XiaoFeng.Mqtt项目引用-->
-	<!--#if (XiaoFengMqttLocation != "") -->
-	<ItemGroup Condition="$(XiaoFengMqtt) == 'Debug'">
-		<ProjectReference Include="XiaoFengMqttLocation" />
-	</ItemGroup>
-	<!--#endif-->
 	<ItemGroup>
-		<!--#if	(XiaoFengMqttLocation != "") -->
+		<!--#if (XiaoFengMqttLocation != "") -->
 		<ProjectReference Include="ELFXiaoFengMqttLocation" Condition="$(XiaoFengMqtt) == 'Debug'" />
 		<PackageReference Include="XiaoFeng.Mqtt" Version="ELFXiaoFengMqttVersion" Condition="$(XiaoFengMqtt) != 'Debug'" />
 		<!--#else-->

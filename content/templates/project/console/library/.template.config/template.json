@@ -60,6 +60,11 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "5.2.10",
+          "displayName": "XiaoFeng 5.2.10",
+          "description": "XiaoFeng 5.2.10"
+        },
+        {
           "choice": "5.2.9",
           "displayName": "XiaoFeng 5.2.9",
           "description": "XiaoFeng 5.2.9"
@@ -103,20 +108,10 @@
           "choice": "5.1.0",
           "displayName": "XiaoFeng 5.1.0",
           "description": "XiaoFeng 5.1.0"
-        },
-        {
-          "choice": "5.0.5",
-          "displayName": "XiaoFeng 5.0.5",
-          "description": "XiaoFeng 5.0.5"
-        },
-        {
-          "choice": "5.0.4",
-          "displayName": "XiaoFeng 5.0.4",
-          "description": "XiaoFeng 5.0.4"
         }
       ],
       "replaces": "ELFXiaoFengVersion",
-      "defaultValue": "5.2.9"
+      "defaultValue": "5.2.10"
     },
     "XiaoFengLocation": {
       "type": "parameter",
@@ -167,6 +162,14 @@
       "replaces": "ELFDbProvider",
       "defaultValue": "no",
       "allowMultipleValues": true
+    },
+    "CopyrightYear": {
+      "type": "generated",
+      "generator": "now",
+      "parameters": {
+        "format": "yyyy"
+      },
+      "replaces": "ELFCopyrightYear"
     }
   },
   "primaryOutputs": [
