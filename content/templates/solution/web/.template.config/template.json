@@ -36,10 +36,14 @@
         {
           "choice": "net9.0",
           "description": "net9.0"
+        },
+        {
+          "choice": "net10.0",
+          "description": "net10.0"
         }
       ],
       "replaces": "FrameworkParameter",
-      "defaultValue": "net9.0"
+      "defaultValue": "net10.0"
     },
     "SupportDocker": {
       "type": "parameter",
@@ -96,6 +100,11 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "5.2.3",
+          "displayName": "XiaoFeng.Mvc 5.2.3",
+          "description": "XiaoFeng.Mvc 5.2.3"
+        },
+        {
           "choice": "5.2.2",
           "displayName": "XiaoFeng.Mvc 5.2.2",
           "description": "XiaoFeng.Mvc 5.2.2"
@@ -147,7 +156,7 @@
         }
       ],
       "replaces": "ELFXiaoFengMvcVersion",
-      "defaultValue": "5.2.2"
+      "defaultValue": "5.2.3"
     },
     "XiaoFengMvcLocation": {
       "type": "parameter",
@@ -163,6 +172,11 @@
       "displayName": "XiaoFeng 类库版本",
       "datatype": "choice",
       "choices": [
+        {
+          "choice": "5.3.0",
+          "displayName": "XiaoFeng 5.3.0",
+          "description": "XiaoFeng 5.3.0"
+        },
         {
           "choice": "5.2.10",
           "displayName": "XiaoFeng 5.2.10",
@@ -215,7 +229,7 @@
         }
       ],
       "replaces": "ELFXiaoFengVersion",
-      "defaultValue": "5.2.10"
+      "defaultValue": "5.3.0"
     },
     "XiaoFengLocation": {
       "type": "parameter",

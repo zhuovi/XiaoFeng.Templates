@@ -40,7 +40,7 @@ XiaoFeng.Templates generator with [XiaoFeng.Templates](https://github.com/zhuovi
 .NET CLI
 
 ```shell
-> dotnet new install XiaoFeng.Templates::1.1.2
+> dotnet new install XiaoFeng.Templates::1.1.3
 ```
 
 # XiaoFeng 类库包含库
@@ -94,7 +94,7 @@ E:\Work\XiaoFeng.Templates> dotnet pack
 ```
 ### 安装指定版本
 ```shell
-> dotnet new install XiaoFeng.Templates::1.1.2
+> dotnet new install XiaoFeng.Templates::1.1.3
 ```
 
 ### 更新
@@ -120,6 +120,10 @@ E:\Work\XiaoFeng.Templates> dotnet pack
 
 
 ## 升级日志
+
+## 2025-09-24	v 1.1.3
+
+1.增加XiaoFeng v 5.3.0 及 XiaoFeng.Mvc v 5.2.3
 
 ## 2025-04-25	v 1.1.2
 

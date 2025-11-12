@@ -14,6 +14,8 @@ FROM mcr.microsoft.com/dotnet/runtime:7.0 AS base
 FROM mcr.microsoft.com/dotnet/runtime:8.0 AS base
 #elseif (Framework == "net9.0")
 FROM mcr.microsoft.com/dotnet/runtime:9.0 AS base
+#elseif (Framework == "net10.0")
+FROM mcr.microsoft.com/dotnet/runtime:10.0 AS base
 #endif
 USER app
 WORKDIR /app
@@ -28,6 +30,8 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 #elseif (Framework == "net9.0")
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+#elseif (Framework == "net10.0")
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 #endif
 # 安装 clang/zlib1g 开发依赖项以发布到本机
 RUN apt-get update \
@@ -64,6 +68,8 @@ FROM ${FINAL_BASE_IMAGE:-mcr.microsoft.com/dotnet/runtime-deps:7.0} AS final
 FROM ${FINAL_BASE_IMAGE:-mcr.microsoft.com/dotnet/runtime-deps:8.0} AS final
 #elseif (Framework == "net9.0")
 FROM ${FINAL_BASE_IMAGE:-mcr.microsoft.com/dotnet/runtime-deps:9.0} AS final
+#elseif (Framework == "net10.0")
+FROM ${FINAL_BASE_IMAGE:-mcr.microsoft.com/dotnet/runtime-deps:10.0} AS final
 #endif
 WORKDIR /app
 COPY --from=publish /app/publish .

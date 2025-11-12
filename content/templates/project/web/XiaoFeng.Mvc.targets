@@ -16,7 +16,7 @@
 	<Import Project="XiaoFeng.targets" Version="1.0.2" />
 	<!--全局引用-->
 	<ItemGroup
-		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR　'$(TargetFramework)'=='net8.0' OR　'$(TargetFramework)'=='net9.0'">
+		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR　'$(TargetFramework)'=='net8.0' OR　'$(TargetFramework)'=='net9.0' OR　'$(TargetFramework)'=='net10.0'">
 		<Using Include="XiaoFeng.Mvc;XiaoFeng.Json;XiaoFeng.Xml;Microsoft.AspNetCore.Builder;Microsoft.Extensions.DependencyInjection;" />
 	</ItemGroup>
 	<!--输出目录配置-->
@@ -32,16 +32,16 @@
 		<PackageReference Include="Stub.System.Data.SQLite.Core.NetStandard" Version="1.0.119" />
 		<!--#endif-->
 		<!--#if	(DbProvider == MySql || ELFAdminProviderType == MySql) -->
-		<PackageReference Include="MySql.Data" Version="9.1.0" />
+		<PackageReference Include="MySqlConnector" Version="2.4.0" />
 		<!--#endif-->
 		<!--#if (DbProvider	== Oracle || ELFAdminProviderType == Oracle) -->
-		<PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.6.1" />
+		<PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.9.1" />
 		<!--#endif-->
 		<!--#if	(DbProvider	== SqlServer || ELFAdminProviderType == SqlServer) -->
-		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
 		<!--#endif-->
 		<!--#if	(DbProvider	== Dameng || ELFAdminProviderType == Dameng) -->
-		<PackageReference Include="DM.DmProvider" Version="8.3.1.30495" />
+		<PackageReference Include="DM.DmProvider" Version="8.3.1.37876" />
 		<!--#endif-->
 	</ItemGroup>
 	<!--XiaoFeng.Mvc项目引用-->
@@ -57,16 +57,18 @@
 	<!--调试时启用运行时编译视图引用-->
 	<ItemGroup Condition="'$(Configuration)|$(RazorCompileOnBuild)'=='Debug|False' ">
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
-			Version="3.1.27" Condition="'$(TargetFramework)' == 'netcoreapp3.1' " />
+			Version="3.1.32" Condition="'$(TargetFramework)' == 'netcoreapp3.1' " />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
 			Version="5.0.17" Condition="'$(TargetFramework)' == 'net5.0'" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
-			Version="6.0.32" Condition="'$(TargetFramework)' == 'net6.0'" />
+			Version="6.0.36" Condition="'$(TargetFramework)' == 'net6.0'" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
 			Version="7.0.20" Condition="'$(TargetFramework)' == 'net7.0'" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
-			Version="8.0.7" Condition="'$(TargetFramework)' == 'net8.0'" />
+			Version="8.0.20" Condition="'$(TargetFramework)' == 'net8.0'" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
-			Version="9.0.0" Condition="'$(TargetFramework)' == 'net9.0'" />
+			Version="9.0.9" Condition="'$(TargetFramework)' == 'net9.0'" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+			Version="10.0.0" Condition="'$(TargetFramework)' == 'net10.0'" />
 	</ItemGroup>
 </Project>

@@ -21,16 +21,16 @@
 		<PackageReference Include="Stub.System.Data.SQLite.Core.NetStandard" Version="1.0.119" />
 		<!--#endif-->
 		<!--#if	(DbProvider == MySql) -->
-		<PackageReference Include="MySql.Data" Version="9.1.0" />
+		<PackageReference Include="MySqlConnector" Version="2.4.0" />
 		<!--#endif-->
 		<!--#if (DbProvider	== Oracle) -->
-		<PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.6.1" />
+		<PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.9.1" />
 		<!--#endif-->
 		<!--#if	(DbProvider	== SqlServer) -->
-		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
 		<!--#endif-->
 		<!--#if	(DbProvider	== Dameng) -->
-		<PackageReference Include="DM.DmProvider" Version="8.3.1.30495" />
+		<PackageReference Include="DM.DmProvider" Version="8.3.1.37876" />
 		<!--#endif-->
 	</ItemGroup>
 </Project>

@@ -17,7 +17,7 @@
 		<SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
 	</PropertyGroup>
 	<PropertyGroup
-		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR '$(TargetFramework)'=='net8.0' OR '$(TargetFramework)'=='net9.0'">
+		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR '$(TargetFramework)'=='net8.0' OR '$(TargetFramework)'=='net9.0' OR '$(TargetFramework)'=='net10.0'">
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 	<PropertyGroup>
@@ -25,7 +25,7 @@
 	</PropertyGroup>
 	<!--全局引用-->
 	<ItemGroup
-		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR '$(TargetFramework)'=='net8.0' OR '$(TargetFramework)'=='net9.0'">
+		Condition="'$(TargetFramework)'=='net6.0' OR '$(TargetFramework)'=='net7.0' OR '$(TargetFramework)'=='net8.0' OR '$(TargetFramework)'=='net9.0' OR '$(TargetFramework)'=='net10.0'">
 		<Using Include="XiaoFeng;XiaoFeng.IO;" />
 		<Using Remove="System.Net.Http.Json;Microsoft.AspNetCore.Http;" />
 	</ItemGroup>
